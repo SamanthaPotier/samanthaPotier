@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Projects</h1>
+<div class="project">
+    <ul class="project__container">
+
+        <!-- <li *ngFor="let project of projects"
+            [class.selected]="project === selectedProject"
+            (click)="onSelect(project)"
+            class="project__item"> -->
+        <li *ngFor="let project of projects" (click)="onSelect(project)" class="project__item">
+            <!-- <a [routerLink]="['/projets', project.id]"> -->
+                <p>{{project.name}}</p>
+                <img src="{{ project.thumbnail }}" alt="{{ project.name }} thumbnail">
+                <p><button (click)="gotoDetails()">View Details</button></p>
+            <!-- </a> -->
+        </li>
+    </ul><!-- / .project__container -->
+</div><!-- / .project -->

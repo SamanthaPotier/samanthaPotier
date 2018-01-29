@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto:300,400,700');
+
+
+@import './assets/styles/reset.css';
+@import './assets/styles/structure.scss';
+@import './assets/styles/font.scss';
+@import './assets/styles/button.scss';
+/*@import './app/common/styles/form.scss';*/
+
+
