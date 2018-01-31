@@ -1,3 +1,21 @@
+.myApp{background: url("/assets/images/bg.jpg") repeat; background-size: 50%; font-family: 'Muli', Helvetica, Arial, sans-serif; color: #454545; font-size: 18px; line-height: 1.5em; min-height: 100vh; display: flex; flex-direction: column;}
+
+
+/*
+ * Footer
+ * -------------------------------------------------- */
+.footer{margin-top: auto; background: red;
+    .footer{
+        &__text{color: blue!important;}
+    }
+}
+
+/* .block {
+ *   @at-root #{&}__element {
+ *   }
+ *   @at-root #{&}--modifier {
+ *   }
+ * } */
 
 .pictureSize{max-width: 200px; height: auto;}
 .pictureSize .pictureImage{width: 200px;}

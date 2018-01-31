@@ -2,13 +2,13 @@ import { NgModule }                  from '@angular/core';
 import { BrowserModule }             from '@angular/platform-browser';
 import { BrowserAnimationsModule }   from '@angular/platform-browser/animations';
 import { HttpModule }                from '@angular/http';
+// import { BemModule }                 from 'angular-bem';
 
 import { ProjectService }     from './services/project.service';
 import { AppRoutingModule }   from './modules/app-routing.module';
 
 import { ProjectsModule }         from './projects/projects.module';
 // import { ProjectsRoutingModule }  from './projects/projects-routing.module';
-
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './data/in-memory-data.service';
@@ -29,7 +29,8 @@ import { PageNotFoundComponent }   from './pageNotFound.component';
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         ProjectsModule,
         // ProjectsRoutingModule,
-        AppRoutingModule
+        AppRoutingModule,
+        // BemModule
     ],
     declarations: [
         AppComponent,
@@ -43,5 +44,11 @@ import { PageNotFoundComponent }   from './pageNotFound.component';
     providers: [ ProjectService ],
     bootstrap: [ AppComponent ]
 })
+
+// BemModule.config({
+//     separators: ['__', '_', '-'], // el / mod / val separators
+//     modCase: 'kebab', // case of modifiers names
+//     ignoreValues: false // cast mod values to booleans
+// }); // method returns BemModule
 
 export class AppModule { }
