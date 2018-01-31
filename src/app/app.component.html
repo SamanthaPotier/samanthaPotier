@@ -1,23 +1,23 @@
-<nav class="header__nav_nav">
-    <ul class="header__nav_container">
-        <li class="header__nav_item"><a routerLink="/accueil" routerLinkActive="current" title="Accueil Samantha Potier" class="header__nav_link">Accueil</a></li>
-        <li class="header__nav_item"><a routerLink="/projets" routerLinkActive="current" title="Projets" class="header__nav_link">Projets</a></li>
-        <li class="header__nav_item"><a routerLink="/parcours" routerLinkActive="current" title="Parcours" class="header__nav_link">Parcours</a></li>
-        <li class="header__nav_item"><a routerLink="/presentation" routerLinkActive="current" title="Présentation" class="header__nav_link">Présentation</a></li>
+<nav>
+    <ul>
+        <li><a routerLink="/accueil" routerLinkActive="current" title="Accueil Samantha Potier" class="header__nav_link">Accueil</a></li>
+        <li><a routerLink="/projets" routerLinkActive="current" title="Projets" class="header__nav_link">Projets</a></li>
+        <li><a routerLink="/parcours" routerLinkActive="current" title="Parcours" class="header__nav_link">Parcours</a></li>
+        <li><a routerLink="/presentation" routerLinkActive="current" title="Présentation" class="header__nav_link">Présentation</a></li>
     </ul><!-- / .header__nav_container -->
 </nav><!-- / .header__nav_nav -->
 <router-outlet></router-outlet>
 
 <footer block="footer">
     <section elem="top">
-        <div class="footer__container">
-            <p class="footer__text">Retrouvez-moi sur : <a href="http://fr.linkedin.com/pub/samantha-potier/58/734/11b" title="Lien vers la page profil LinkedIn de Samantha Potier" target="_blank" class="footer__link"><i class="icon__linkedin footer__icon"></i></a><a href="http://fr.viadeo.com/fr/profile/samantha.potier1" title="Lien vers la page profil Viadeo de Samantha Potier" target="_blank" class="footer__link"><i class="icon__twitter footer__icon"></i></a></p>
-            <p class="footer__text footer_text_legal"><a routerLink="/presentation" title="Mentions légales" class="footer__link">Mentions légales</a></p>
+        <div>
+            <p>Retrouvez-moi sur : <a href="http://fr.linkedin.com/pub/samantha-potier/58/734/11b" title="Lien vers la page profil LinkedIn de Samantha Potier" target="_blank"><i class="icon__"></i></a><a href="http://fr.viadeo.com/fr/profile/samantha.potier1" title="Lien vers la page profil Viadeo de Samantha Potier" target="_blank" ><i class="icon__twitter footer__icon"></i></a></p>
+            <p><a routerLink="/presentation" title="Mentions légales">Mentions légales</a></p>
         </div><!-- / .footer__container -->
     </section><!-- / .footer__top -->
-    <section class="footer__bottom">
-        <div class="footer__container">
-            <p class="footer__text">©Samantha Potier 2011 - {{ today | date:'yyyy' }}</p>
+    <section>
+        <div>
+            <p>©Samantha Potier 2011 - {{ today | date:'yyyy' }}</p>
         </div><!-- / .footer__container -->
     </section><!-- / .footer__bottom -->
 </footer><!-- / .footer -->

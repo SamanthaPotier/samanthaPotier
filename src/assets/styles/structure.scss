@@ -1,5 +1,5 @@
-.myApp{background: url("/assets/images/bg.jpg") repeat; background-size: 50%; font-family: 'Muli', Helvetica, Arial, sans-serif; color: #454545; font-size: 18px; line-height: 1.5em; min-height: 100vh; display: flex; flex-direction: column;}
-
+h1, h2, h3, h4, h5{font-family: 'originextra_bold', Helvetica, Arial, sans-serif; letter-spacing: 0.1em; line-height: 1.8em;}
+.myApp{background: url("/assets/images/bg.jpg") repeat; background-size: 50%; font-family: 'mulilight', Helvetica, Arial, sans-serif; color: #454545; font-size: 18px; line-height: 1.5em; min-height: 100vh; display: flex; flex-direction: column;}
 
 /*
  * Footer
@@ -9,13 +9,6 @@
         &__text{color: blue!important;}
     }
 }
-
-/* .block {
- *   @at-root #{&}__element {
- *   }
- *   @at-root #{&}--modifier {
- *   }
- * } */
 
 .pictureSize{max-width: 200px; height: auto;}
 .pictureSize .pictureImage{width: 200px;}

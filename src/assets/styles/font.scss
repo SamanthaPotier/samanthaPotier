@@ -1,6 +1,16 @@
-//
-// Font-Face
-// --------------------------------------------------
+/*
+ * Font Face
+ * -------------------------------------------------- */
+@font-face {font-family: 'mulilight';
+    src: url('/assets/fonts/muli-light-webfont.eot');
+    src: url('/assets/fonts/muli-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/muli-light-webfont.woff2') format('woff2'),
+         url('/assets/fonts/muli-light-webfont.woff') format('woff'),
+         url('/assets/fonts/muli-light-webfont.ttf') format('truetype'),
+         url('/assets/fonts/muli-light-webfont.svg#mulilight') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
 @font-face {
     font-family: 'originextra_bold';
     src: url('/assets/fonts/origin-extrabold-webfont.eot');
@@ -9,18 +19,6 @@
          url('/assets/fonts/origin-extrabold-webfont.woff') format('woff'),
          url('/assets/fonts/origin-extrabold-webfont.ttf') format('truetype'),
          url('/assets/fonts/origin-extrabold-webfont.svg#originextra_bold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'origin_regular';
-    src: url('/assets/fonts/origin-regular-webfont.eot');
-    src: url('/assets/fonts/origin-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/origin-regular-webfont.woff2') format('woff2'),
-         url('/assets/fonts/origin-regular-webfont.woff') format('woff'),
-         url('/assets/fonts/origin-regular-webfont.ttf') format('truetype'),
-         url('/assets/fonts/origin-regular-webfont.svg#originregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
