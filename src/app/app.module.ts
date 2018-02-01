@@ -2,7 +2,7 @@ import { NgModule }                  from '@angular/core';
 import { BrowserModule }             from '@angular/platform-browser';
 import { BrowserAnimationsModule }   from '@angular/platform-browser/animations';
 import { HttpModule }                from '@angular/http';
-// import { BemModule }                 from 'angular-bem';
+import { BemModule }                 from 'angular-bem';
 
 import { ProjectService }     from './services/project.service';
 import { AppRoutingModule }   from './modules/app-routing.module';
@@ -30,7 +30,7 @@ import { PageNotFoundComponent }   from './pageNotFound.component';
         ProjectsModule,
         // ProjectsRoutingModule,
         AppRoutingModule,
-        // BemModule
+        BemModule
     ],
     declarations: [
         AppComponent,
