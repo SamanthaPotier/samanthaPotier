@@ -1,32 +1,31 @@
-<header>
-    <div>
-        <a routerLink="/accueil" title="Accueil Samantha Potier">
-            Logo
-            <h1>Samantha Potier</h1>
-            <h2>Gestion de projet multimédia<br>Développeur Front-End • UX/UI Designer</h2>
-        </a>
-    </div>
-    <nav>
-        <ul>
-            <li><a routerLink="/accueil" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
-            <li><a routerLink="/projets" routerLinkActive="current" title="Projets">Projets</a></li>
-            <li><a routerLink="/parcours" routerLinkActive="current" title="Parcours">Parcours</a></li>
-            <li><a routerLink="/presentation" routerLinkActive="current" title="Présentation">Présentation</a></li>
-        </ul>
-    </nav>
-</header>
+<header block="header">
+    <div element="logo" block="logo">
+        <a element="link" routerLink="/accueil" title="Accueil Samantha Potier">
+            <img element="picture" src="" alt="Logo">
+            <h1 element="title">Samantha Potier</h1>
+            <h2 element="subTitle">Gestion de projet multimédia<br>Développeur Front-End • UX/UI Designer</h2>
+        </a><!-- / .logo__linkg -->
+    </div><!-- / .logo -->
+    <nav block="nav">
+        <ul elem="list">
+            <li elem="item"><a elem="link" routerLink="/accueil" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
+            <li elem="item"><a elem="link" routerLink="/projets" routerLinkActive="current" title="Projets">Projets</a></li>
+            <li elem="item"><a elem="link" routerLink="/parcours" routerLinkActive="current" title="Parcours">Parcours</a></li>
+            <li elem="item"><a elem="link" routerLink="/presentation" routerLinkActive="current" title="Présentation">Présentation</a></li>
+        </ul><!-- / .nav__list -->
+    </nav><!-- / .nav -->
+</header><!-- / .header -->
 <router-outlet></router-outlet>
 
 <footer block="footer">
     <section elem="top">
-        <div>
-            <p>Retrouvez-moi sur : <a href="http://fr.linkedin.com/pub/samantha-potier/58/734/11b" title="Lien vers la page profil LinkedIn de Samantha Potier" target="_blank"><i class="icon__"></i></a><a href="http://fr.viadeo.com/fr/profile/samantha.potier1" title="Lien vers la page profil Viadeo de Samantha Potier" target="_blank" ><i class="icon__twitter footer__icon"></i></a></p>
-            <p><a routerLink="/presentation" title="Mentions légales">Mentions légales</a></p>
-        </div>
-    </section>
-    <section>
-        <div>
-            <p>©Samantha Potier 2011 - {{ today | date:'yyyy' }}</p>
-        </div>
-    </section>
-</footer>
+        <div elem="container">
+            <p elem="text">Retrouvez-moi sur : <a href="http://fr.linkedin.com/pub/samantha-potier/58/734/11b" title="Lien vers la page profil LinkedIn de Samantha Potier" target="_blank"><i class="icon__"></i></a><a href="http://fr.viadeo.com/fr/profile/samantha.potier1" title="Lien vers la page profil Viadeo de Samantha Potier" target="_blank" ><i class="icon__twitter footer__icon"></i></a></p>
+        </div><!-- / .footer__container -->
+    </section><!-- / .footer__top -->
+    <section elem="bottom">
+        <div elem="container">
+            <p elem="text">©Samantha Potier 2011 - {{ today | date:'yyyy' }}</p>
+        </div><!-- / .footer__container -->
+    </section><!-- / .footer__bottom -->
+</footer><!-- / .footer -->
