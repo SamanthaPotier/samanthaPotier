@@ -3,7 +3,7 @@ import { BrowserModule }             from '@angular/platform-browser';
 import { BrowserAnimationsModule }   from '@angular/platform-browser/animations';
 import { HttpModule }                from '@angular/http';
 import { BemModule }                 from 'angular-bem';
-
+// import { slickCarousel }       from 'angular-slick-carousel';
 import { ProjectService }     from './services/project.service';
 import { AppRoutingModule }   from './modules/app-routing.module';
 
@@ -44,11 +44,5 @@ import { PageNotFoundComponent }   from './pageNotFound.component';
     providers: [ ProjectService ],
     bootstrap: [ AppComponent ]
 })
-
-// BemModule.config({
-//     separators: ['__', '_', '-'], // el / mod / val separators
-//     modCase: 'kebab', // case of modifiers names
-//     ignoreValues: false // cast mod values to booleans
-// }); // method returns BemModule
 
 export class AppModule { }

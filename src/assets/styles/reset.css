@@ -5,11 +5,11 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+html, button, input, select, textarea { font-family: sans-serif; color: #454545; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
-::-moz-selection {background: @blueDark; color: @white; text-shadow: none; }
-::selection {background: @blueDark; color: @white; text-shadow: none; }
+::-moz-selection {background: #0e79b7; color: #ececed; text-shadow: none; }
+::selection {background: #0e79b7; color: #ececed; text-shadow: none; }
 
 /* liste */
 nav ul, nav ol, ul { list-style: none; list-style-image: none; margin: 0; padding: 0; }
