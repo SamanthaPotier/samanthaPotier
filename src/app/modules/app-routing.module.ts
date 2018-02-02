@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent }            from './../home/home.component';
 import { PresentationComponent }    from './../informations/presentation.component';
 import { CareerComponent }          from './../informations/career.component';
-import { PageNotFoundComponent }    from './../pageNotFound.component';
+// import { PageNotFoundComponent }    from './../pageNotFound.component';
 
 const appRoutes: Routes = [
     {
@@ -24,7 +24,7 @@ const appRoutes: Routes = [
         redirectTo: '/accueil',
         pathMatch: 'full'
     },
-    { path: '**', component: PageNotFoundComponent }
+    // { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

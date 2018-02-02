@@ -19,7 +19,7 @@ import { HomeComponent }           from './home/home.component';
 // import { ProjectDetailsComponent } from './projects/details/projectDetails.component';
 import { PresentationComponent }   from './informations/presentation.component';
 import { CareerComponent }         from './informations/career.component';
-import { PageNotFoundComponent }   from './pageNotFound.component';
+// import { PageNotFoundComponent }   from './pageNotFound.component';
 
 @NgModule({
     imports: [
@@ -39,7 +39,7 @@ import { PageNotFoundComponent }   from './pageNotFound.component';
         // ProjectDetailsComponent,
         PresentationComponent,
         CareerComponent,
-        PageNotFoundComponent
+        // PageNotFoundComponent
     ],
     providers: [ ProjectService ],
     bootstrap: [ AppComponent ]
