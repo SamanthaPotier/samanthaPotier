@@ -21,7 +21,6 @@ import { PresentationComponent }   from './informations/presentation.component';
 import { CareerComponent }         from './informations/career.component';
 // import { PageNotFoundComponent }   from './pageNotFound.component';
 
-
 BemModule.config({
   separators: ['__', '_', '-'], // el / mod / val separators
   modCase: 'kebab', // case of modifiers names
