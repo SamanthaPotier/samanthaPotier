@@ -1,14 +1,10 @@
-h1, h2, h3, h4, h5{font-family: 'originextra_bold', Helvetica, Arial, sans-serif; letter-spacing: 0.1em; line-height: 1.8em;}
+[class*="__title"],
+[class*="__subTitle"]{font-family: 'originextra_bold', Helvetica, Arial, sans-serif; letter-spacing: 0.1em; line-height: 1.8em;}
 .myApp{background: url("/assets/images/bg.jpg") repeat; background-size: 50%; font-family: 'mulilight', Helvetica, Arial, sans-serif; color: #454545; font-size: 18px; line-height: 1.5em; min-height: 100vh; display: flex; flex-direction: column;}
+a:hover{color: #ff9a14;}
+*{transition: all 0.5s;}
 
-/*
- * Footer
- * -------------------------------------------------- */
-.footer{margin-top: auto; background: red;
-    .footer{
-        &__text{color: blue!important;}
-    }
-}
+[class*="__innerContent"]{max-width: 1800px; margin: 0 auto;}
 
 .pictureSize{max-width: 200px; height: auto;}
 .pictureSize .pictureImage{width: 200px;}

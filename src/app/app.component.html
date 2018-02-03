@@ -1,31 +1,33 @@
 <header block="header">
-    <div element="logo" block="logo">
-        <a element="link" routerLink="/accueil" title="Accueil Samantha Potier">
-            <img element="picture" src="" alt="Logo">
-            <h1 element="title">Samantha Potier</h1>
-            <h2 element="subTitle">Gestion de projet multimédia<br>Développeur Front-End • UX/UI Designer</h2>
-        </a><!-- / .logo__linkg -->
-    </div><!-- / .logo -->
-    <nav block="nav">
-        <ul elem="list">
-            <li elem="item"><a elem="link" routerLink="/accueil" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
-            <li elem="item"><a elem="link" routerLink="/projets" routerLinkActive="current" title="Projets">Projets</a></li>
-            <li elem="item"><a elem="link" routerLink="/parcours" routerLinkActive="current" title="Parcours">Parcours</a></li>
-            <li elem="item"><a elem="link" routerLink="/presentation" routerLinkActive="current" title="Présentation">Présentation</a></li>
-        </ul><!-- / .nav__list -->
-    </nav><!-- / .nav -->
+    <div elem="innerContent">
+        <div elem="logo" block="logo">
+            <a elem="link" routerLink="/accueil" title="Accueil Samantha Potier">
+                <img elem="picture" alt="SP" src="/assets/images/logo__samanthaPotier.svg" data-fallback="/assets/images/logo__samanthaPotier_@2x.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;" />
+                <h1 elem="title">Samantha Potier</h1>
+                <h2 elem="subTitle">Gestion de projet multimédia<br>Développeur Front-End • UX/UI Designer</h2>
+            </a><!-- / .logo__linkg -->
+        </div><!-- / .logo -->
+        <nav block="nav">
+            <ul elem="list">
+                <li elem="item"><a elem="link" routerLink="/accueil" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
+                <li elem="item"><a elem="link" routerLink="/projets" routerLinkActive="current" title="Projets">Projets</a></li>
+                <li elem="item"><a elem="link" routerLink="/parcours" routerLinkActive="current" title="Parcours">Parcours</a></li>
+                <li elem="item"><a elem="link" routerLink="/presentation" routerLinkActive="current" title="Présentation">Présentation</a></li>
+            </ul><!-- / .nav__list -->
+        </nav><!-- / .nav -->
+    </div><!-- / .header__innerContent -->
 </header><!-- / .header -->
 <router-outlet></router-outlet>
 
 <footer block="footer">
     <section elem="top">
-        <div elem="container">
-            <p elem="text">Retrouvez-moi sur : <a href="http://fr.linkedin.com/pub/samantha-potier/58/734/11b" title="Lien vers la page profil LinkedIn de Samantha Potier" target="_blank"><i class="icon__"></i></a><a href="http://fr.viadeo.com/fr/profile/samantha.potier1" title="Lien vers la page profil Viadeo de Samantha Potier" target="_blank" ><i class="icon__twitter footer__icon"></i></a></p>
-        </div><!-- / .footer__container -->
+        <div elem="innerContent">
+            <p elem="text">Retrouvez-moi sur : <a href="http://fr.linkedin.com/pub/samantha-potier/58/734/11b" title="Lien vers la page profil LinkedIn de Samantha Potier" target="_blank" elem="link"><i class="icon__linkedin"></i></a><a href="https://twitter.com/SamPotier" title="Lien vers la page profil Twitter de Samantha Potier" target="_blank" elem="link"><i class="icon__twitter footer__icon"></i></a></p>
+        </div><!-- / .footer__innerContent -->
     </section><!-- / .footer__top -->
     <section elem="bottom">
-        <div elem="container">
+        <div elem="innerContent">
             <p elem="text">©Samantha Potier 2011 - {{ today | date:'yyyy' }}</p>
-        </div><!-- / .footer__container -->
+        </div><!-- / .footer__innerContent -->
     </section><!-- / .footer__bottom -->
 </footer><!-- / .footer -->

@@ -1,36 +1,35 @@
-<h1>Home Page</h1>
 <div>
     <ul>
-        <li><a *ngFor="let project of projects" [routerLink]="['/projets', project.id]">{{project.name}}</a></li>
+        <li *ngFor="let project of projects"><a [routerLink]="['/projets', project.id]">{{project.name}}</a></li>
     </ul>
 </div><!-- / .slider -->
-<div block="home">
-    <div elem="sectionMa" mod="hello">
-        <h2 class="home__title"><i class="icon__"></i>Gestion de projet multimédia</h2>
-        <ul>
-            <li>Cahier des charges fonctionnels et techniques</li>
-            <li>Planning</li>
-            <li>Budget</li>
-            <li>Qualité Web : Opquast</li>
-        </ul>
-    </div>
-    <div>
-        <h2><i class="icon__"></i>Développement</h2>
-        <ul>
-            <li>HTML5 / CC3</li>
-            <li>jQuery</li>
-            <li>Responsive</li>
-            <li>Angular</li>
-            <li>Référencement naturel</li>
-        </ul>
-    </div>
-    <div>
-        <h2><i class="icon__"></i>Interface</h2>
-        <ul>
-            <li>Ergonomie</li>
-            <li>UI / UX Design</li>
-            <li>Architecture de l'information</li>
-            <li>Responsive Design : Web, Tablette et Mobile</li>
-        </ul>
-    </div>
-</div>
+<div block="doing">
+    <div elem="sector">
+        <h2 elem="title"><i elem="icon" class="icon__"></i>Gestion de projet multimédia</h2>
+        <ul elem="list">
+            <li elem="item">Cahier des charges fonctionnels et techniques</li>
+            <li elem="item">Planning</li>
+            <li elem="item">Budget</li>
+            <li elem="item">Qualité Web : Opquast</li>
+        </ul><!-- / .doing__list -->
+    </div><!-- / .doing__sector -->
+    <div elem="sector">
+        <h2 elem="title"><i elem="icon" class="icon__"></i>Développement</h2>
+        <ul elem="list">
+            <li elem="item">HTML5 / CC3</li>
+            <li elem="item">jQuery</li>
+            <li elem="item">Responsive</li>
+            <li elem="item">Angular</li>
+            <li elem="item">Référencement naturel</li>
+        </ul><!-- / .doing__list -->
+    </div><!-- / .doing__sector -->
+    <div elem="sector">
+        <h2 elem="title"><i elem="icon" class="icon__"></i>Interface</h2>
+        <ul elem="list">
+            <li elem="item">Ergonomie</li>
+            <li elem="item">UI / UX Design</li>
+            <li elem="item">Architecture de l'information</li>
+            <li elem="item">Responsive Design : Web, Tablette et Mobile</li>
+        </ul><!-- / .doing__list -->
+    </div><!-- / .doing__sector -->
+</div><!-- / .doing -->
