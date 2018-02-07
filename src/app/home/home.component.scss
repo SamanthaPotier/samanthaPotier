@@ -1,7 +1,7 @@
 /*
  * Slider
  * -------------------------------------------------- */
-.carousel{background:url('/assets/images/bg-slider.jpg') repeat-x center; height:491px; position: relative;
+.carousel{background:url('/assets/images/bg-slider.jpg') repeat-x center; height:auto; position: relative;
     .carousel{
         @at-root #{&}__nav{position: absolute; top: 0; height: 100%; width: 79px; background: rgba(23,18,58,0.5); font-size: 141px; color: #ececed;
             &:focus{outline-width: 0;}
@@ -23,12 +23,41 @@
     }
 }
 
+@media (max-width: 960px) {
+    .carousel{
+        .carousel{
+            &__nav{width: 45px;}
+            &__icon{font-size: 0.5em;}
+        }
+    }
+}
 
-// .sam{font-size: 2em; color: red!important;}
-// .icon__web:before{margin-bottom: 2em; font-size: 2em;}
-// .sectorIcon[_ngcontent-c3]{font-size: 2em; margin-bottom: 1em; color: red!important;}
-// .ngxcarousel-inner{height: 100%;}
-// .ngxcarouselPointDefault{position: absolute; width: 100%; bottom: 0;}
+@media (max-width: 800px) {
+    .carousel{height: auto;
+        .carousel{
+            &__item{flex-direction: column; height: inherit; padding-top: 1em; padding-bottom: 1em;}
+            &__title{font-size: 1.2em;}
+            &__textPart{margin-left: auto; margin-right: auto; width: 80%;}
+            &__picturePart{width: 70%; margin-top: 2em;}
+            &__projectSectors{display: none;}
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .carousel{
+        .carousel{
+            &__item{overflow: hidden;}
+            &__nav{display: none!important;}
+            &__textPart{width: 90%;}
+            &__picturePart{width: 120%;}
+        }
+    }
+}
+
+@media (max-width: 300px) {
+    .carousel{display: none;}
+}
 
 
  /*
@@ -95,4 +124,8 @@
             }
         }
     }
+}
+
+@media (max-width: 300px) {
+    .doing{padding-top: 0; padding-bottom: 0;}
 }
