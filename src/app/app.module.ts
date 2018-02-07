@@ -10,7 +10,6 @@ import 'hammerjs';
 import { ProjectService }     from './services/project.service';
 import { AppRoutingModule }   from './modules/app-routing.module';
 
-
 import { ProjectsModule }         from './projects/projects.module';
 // import { ProjectsRoutingModule }  from './projects/projects-routing.module';
 
@@ -27,7 +26,7 @@ import { CareerComponent }         from './informations/career.component';
 BemModule.config({
   separators: ['__', '_', '-'], // el / mod / val separators
   modCase: 'kebab', // case of modifiers names
-  ignoreValues: false // cast mod values to booleans
+  ignoreValues: true // cast mod values to booleans
 });
 
 @NgModule({

@@ -11,7 +11,6 @@ export class InMemoryDataService implements InMemoryDbService {
                 "thumbnail": "http://samanthapotier.com/img/thumbnail/soun-collection.jpg",
                 "domains": [
                     "newsletter",
-                    "mobile",
                 ],
                 "image":"akkaAeronews",
                 "subTitle": "Vêtement",
@@ -22,7 +21,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     "web"
                 ],
                 "linkToProject": "",
-                "slider": true,
+                "slider": true
             },
             { 
                 "id": 1, 
@@ -43,7 +42,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     "web"
                 ],
                 "linkToProject": "",
-                "slider": false,
+                "slider": false
             },
             { 
                 "id": 5,
@@ -65,7 +64,71 @@ export class InMemoryDataService implements InMemoryDbService {
                     "management"
                 ],
                 "linkToProject": "http://www.ppfromlongwy.com/",
-                "slider": true,
+                "slider": true
+            },
+            { 
+                "id": 6,
+                "display": true,
+                "name": "Soun Collection",
+                "slug": "soun-collection",
+                "thumbnail": "http://samanthapotier.com/img/thumbnail/soun-collection.jpg",
+                "domains": [
+                    "newsletter",
+                    "application",
+                ],
+                "image":"akkaAeronews",
+                "subTitle": "Vêtement",
+                "description": "Création d'un modèle de newsletter, <span class='red'>réalisé en 2011</span> au sein de l'agence Websiting. Soun collection est une ligne de vêtements pour femmes.",
+                "intervention": "Conception graphique d'un modèle newsletter.",
+                "sectors": [
+                    "graphisme",
+                    "web"
+                ],
+                "linkToProject": "",
+                "slider": true
+            },
+            { 
+                "id": 7, 
+                "display": true,
+                "name": "Vidéo Thérapie",
+                "slug": "video-therapie",
+                "thumbnail": "http://samanthapotier.com/img/thumbnail/video-therapie.jpg",
+                "domains": [
+                    "newsletter",
+                    "web"
+                ],
+                "image":"artDuFeu",
+                "subTitle": "Conseil",
+                "description": "Création d'un modèle de newsletter, réalisé en 2011 au sein de l'agence Websiting. Vidéo Thérapie est un service de conseil par vidéo conférence.",
+                "intervention":"Conception graphique d'un modèle newsletter.",
+                "sectors": [
+                    "graphisme",
+                    "web"
+                ],
+                "linkToProject": "",
+                "slider": false
+            },
+            { 
+                "id": 8,
+                "display": true, 
+                "name": "PP From Longwy",
+                "slug": "pp-from-longwy",
+                "thumbnail": "http://samanthapotier.com/img/thumbnail/pp-from-longwy.jpg",
+                "domains": [
+                    "web",
+                    "web"
+                ],
+                "image":"g2s",
+                "subTitle": "Bijoutier",
+                "description": "Projet scolaire, en groupe, <span style='color: red;'>réalisé</span> 2012 à l'IESA Multimédia Paris. Le brief donné était de réaliser un site internet dynamique sans utilisation de CMS. Nous avons choisi un vrai client : PP From Longwy, un créateur de bijoux.",
+                "intervention": "Intégration HTML/CSS responsive de toutes les pages du site internet (front office et back office).",
+                "sectors": [
+                    "web",
+                    "responsive",
+                    "management"
+                ],
+                "linkToProject": "http://www.ppfromlongwy.com/",
+                "slider": true
             }
         ];
         return {projects};

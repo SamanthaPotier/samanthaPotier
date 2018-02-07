@@ -1,29 +1,27 @@
-<!-- <div *ngIf="project.slider = true"> -->
-    <ngx-carousel block="carousel"
-        [inputs]="carouselOne"
-        (carouselLoad)="myfunc($event)">
-        <!-- *ngIf="project.slider =='true'"  -->
-        <ngx-item NgxCarouselItem *ngFor="let project of projects">
-            <div elem="item">
-                <div elem="textPart">
-                    <p elem="title">{{project.name}}</p>
-                    <ul elem="projectSectors">
-                        <li *ngFor="let sector of project.sectors" elem="sectorItem"><i class="icon__{{ sector }} carousel__sectorIcon"></i>{{ sector }}</li>
-                    </ul>
-                    <a elem="button" [routerLink]="['/projets', project.id]"><i elem="iconButton" class="icon__seeproject"></i>Voir le projet</a>
-                </div>
-                <div elem="picturePart">
-                    <picture elem="picture">
-                        <source media="(min-width: 200px)" srcset="/assets/images/projects/{{ project.image }}_@1600.png">
-                        <img elem="image" src="/assets/images/projects/{{ project.image }}_@800.png" alt="{{ project.name }}">
-                    </picture>
-                </div>
+<ngx-carousel block="carousel"
+    [inputs]="carouselOne"
+    (carouselLoad)="myfunc($event)">
+    <!-- *ngIf="project.slider =='true'"  -->
+    <ngx-item NgxCarouselItem *ngFor="let project of projects">
+        <div elem="item">
+            <div elem="textPart">
+                <p elem="title">{{project.name}}</p>
+                <ul elem="projectSectors">
+                    <li *ngFor="let sector of project.sectors" elem="sectorItem"><i class="icon__{{ sector }} carousel__sectorIcon"></i>{{ sector }}</li>
+                </ul>
+                <a elem="button" [routerLink]="['/projets', project.id]"><i elem="iconButton" class="icon__seeproject"></i>Voir le projet</a>
             </div>
-        </ngx-item>
-        <button NgxCarouselPrev elem="nav" mod="left"><i elem="icon" class="icon__prevslider"></i></button>
-        <button NgxCarouselNext elem="nav" mod="right"><i elem="icon" class="icon__nextslider"></i></button>
-    </ngx-carousel>
-<!-- </div> -->
+            <div elem="picturePart">
+                <picture elem="picture">
+                    <source media="(min-width: 200px)" srcset="/assets/images/projects/{{ project.image }}_@1600.png">
+                    <img elem="image" src="/assets/images/projects/{{ project.image }}_@800.png" alt="{{ project.name }}">
+                </picture>
+            </div>
+        </div>
+    </ngx-item>
+    <button NgxCarouselPrev elem="nav" mod="left"><i elem="icon" class="icon__prevslider"></i></button>
+    <button NgxCarouselNext elem="nav" mod="right"><i elem="icon" class="icon__nextslider"></i></button>
+</ngx-carousel>
 
 <div class="__innerContent">
     <div block="doing">
