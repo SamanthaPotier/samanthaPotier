@@ -1,14 +1,98 @@
 /*
  * Slider
  * -------------------------------------------------- */
- 
+.carousel{background:url('/assets/images/bg-slider.jpg') repeat-x center; height:491px; position: relative;
+    .carousel{
+        @at-root #{&}__nav{position: absolute; top: 0; height: 100%; width: 79px; background: rgba(23,18,58,0.5); font-size: 141px; color: #ececed;
+            &:focus{outline-width: 0;}
+            &:hover .carousel__icon{opacity: 1;}
+        }
+        @at-root #{&}__nav_right{right: 0;}
+        @at-root #{&}__icon{opacity:0.5;}
+        @at-root #{&}__item{display: flex; align-items: center; justify-content: center; height: 491px; padding: 3em 0; box-sizing: border-box;}
+        @at-root #{&}__textPart{display:flex; flex-direction: column; width: 32%; margin-left: 88px; margin-right: 1em; height: 100%;}
+        @at-root #{&}__title{text-align: center; color: #ececed; font-family: 'originextra_regular', Helvetica, Arial, sans-serif; font-size: 1.4em; text-shadow: 5px 7px 2px #0e79b7; margin-bottom: 1em;}
+        @at-root #{&}__projectSectors{display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around;}
+        @at-root #{&}__sectorItem{display: flex; flex-direction: column; color: #ececed; text-transform: uppercase; align-items: center; margin: 0.5em 1em; font-size: 0.9em;}
+        @at-root #{&}__sectorIcon{font-size: 3em; margin-bottom: 0.05em;}
+        @at-root #{&}__button{margin-top: auto; font-size: 1.2em; letter-spacing: 0.05em; padding: 0.5em 1em; text-align: center; align-self: center;}
+        @at-root #{&}__iconButton{margin-right: 0.5em;}
+        @at-root #{&}__picturePart{width: 71%;}
+        @at-root #{&}__image{object-fit: contain; width: 100%;}
+        
+    }
+}
+
+
+// .sam{font-size: 2em; color: red!important;}
+// .icon__web:before{margin-bottom: 2em; font-size: 2em;}
+// .sectorIcon[_ngcontent-c3]{font-size: 2em; margin-bottom: 1em; color: red!important;}
+// .ngxcarousel-inner{height: 100%;}
+// .ngxcarouselPointDefault{position: absolute; width: 100%; bottom: 0;}
+
 
  /*
  * Text
  * -------------------------------------------------- */
-.home{
-    .home {
-       @at-root #{&}__section {background: red;}
-       @at-root #{&}__title {color: green;}
+.doing{display: flex; flex-wrap: wrap; padding: 2em 0; justify-content: space-between;
+    .doing{
+        @at-root #{&}__sector{width: 27%; min-width: 208px; text-align: center; position: relative; display: flex; flex-direction: column; padding: 2em 0; margin: 0 3%;
+            &:before,
+            &:after{content:""; display:block; width:1px; height:100%; position:absolute; top:0; transform: rotate(10deg);}
+            &:after{background: #bababa; right:-17%;}
+            &:before{background: #454545; right:-16%;}
+            &:last-child{
+                &:before,
+                &:after{display: none;}
+            }
+        }
+        @at-root #{&}__title{color: #0e79b7; font-size: 1em; margin-bottom: 1em; text-align: left; display: flex; align-items: center; justify-content: center;}
+        @at-root #{&}__icon{font-size: 2em; margin-right: 0.5em;}
+        @at-root #{&}__list{margin-top: auto; font-size: 0.95em;}
+        @at-root #{&}__item{margin-bottom: 3px;
+            &:last-child{margin-bottom: 0;}
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .doing{
+        .doing{
+            @at-root #{&}__sector{
+                &:after{right: -6%;}
+                &:before{right: -5%}
+            }
+            @at-root #{&}__title{font-size: 0.9em;}
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .doing{justify-content: center;
+        .doing{
+            @at-root #{&}__sector{width: 43%; min-width: initial;
+                &:nth-child(2){
+                    &:before,
+                    &:after{display: none;}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .doing{flex-direction: column;
+        .doing{
+            @at-root #{&}__sector{width: 100%; margin: 0;
+                &:before,
+                &:after{transform: rotate(-6deg) translateX(-50%); right: -32%; height: 1px; width: 80%;}
+                &:nth-child(2){
+                    &:before,
+                    &:after{display: block;}
+                }
+                &:after{top: 93%;}
+                &:before{top: 91%;}
+            }
+        }
     }
 }

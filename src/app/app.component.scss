@@ -46,6 +46,86 @@
 
 
 /*
+ * Sidebar
+ * -------------------------------------------------- */
+.ng-sidebar__backdrop[_ngcontent-c1]{background-color: rgba(0,0,0,0.4)!important;}
+.sidebarContainer{
+    .sidebarContainer{
+        @at-root #{&}__menuContent{background: #17123a; color: #ececed; height: 100vh; width: 300px;}
+    }
+}
+
+.contactMe{display: flex; align-items: center; justify-content: center; padding-top: 20px;
+    .contactMe{
+        @at-root #{&}__item{margin: 0 0.5em;}
+        @at-root #{&}__link{background: #ff9a14; color: #17123a; border-radius: 50%; display: block; width: 45px; height: 45px; line-height: 48px; text-align: center;}
+    }
+}
+
+.navSidebar{
+    .navSidebar{
+        @at-root #{&}__link{padding: 15px 10px 15px 20px; border-bottom: solid 1px #0e79b7; color: #ececed; text-align: left; display: block;
+            &.current{border-left: solid 20px #0e79b7;}
+            &:focus{outline-width: 0;}
+        }
+    }
+}
+
+
+
+.menuMobile{display: none;}
+
+@media (max-width: 1024px) {
+    .header{padding-left: 0em; padding-right: 0em;}
+}
+
+@media (max-width: 850px) {
+    .logo{
+        .logo{
+            @at-root #{&}__picture{max-width: 110px;}
+            @at-root #{&}__title{font-size: 1em;}
+            @at-root #{&}__subTitle{display: none;}
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .header{
+        .header{
+            @at-root #{&}__innerContent{flex-direction: column; align-items: center;}
+        }
+    }
+    .logo{
+        .logo{
+            @at-root #{&}__link{margin-right: 0; margin-bottom: 1em;}
+        }
+    }
+    .nav{
+        .nav{
+            @at-root #{&}__link{padding-top: 1em; padding-bottom: 1em;}
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .logo{
+        .logo{
+            @at-root #{&}__picture{max-width: 70px;}
+            @at-root #{&}__title{font-size: 0.8em;}
+            @at-root #{&}__link{margin-bottom: 0.5em; margin-top: 0.5em;}
+        }
+    }
+
+    .nav{display: none;}
+    .menuMobile{position: absolute; top: 0; right: 0; display: flex; flex-direction: column; text-align: center; align-items: center; color: #ececed; background: #ff9a14; padding: 0.5em 1em; border-radius: 0 0 0 10px; font-size: 0.8em;
+        &:focus{outline-width: 0;}
+        .menuMobile{
+            @at-root #{&}__icon{font-size: 2em;}
+        }
+    }
+}
+
+/*
  * Footer
  * -------------------------------------------------- */
 
@@ -53,11 +133,10 @@
     .footer{
         @at-root #{&}__top{background: #17123a; color: #ececed; padding: 0.5em 2em; position: relative; margin-top: 2.5em;
             &:before,
-            &:after{content: ""; position: absolute; width: 200%; height: 44px; position: absolute; z-index: 0; left: 0; background: #17123a;}
-            &:before{top: 0%; transform: rotate(0deg) skewY(1deg);}
-            &:after{top: 13%; transform: rotate(0deg) skewY(-1deg);}
+            &:after{content: ""; position: absolute; z-index: 0; left: 0; left: 0; width: 0; height: 0; border-style: solid;}
+            &:before{border-width: 1.2em 0 0 100vw; border-color: transparent transparent transparent #17123a; top: -1.2em;}
+            &:after{border-width: 1.2em 100vw 0 0; border-color: #17123a transparent transparent transparent; bottom: -1.2em;}
         }
-
         @at-root #{&}__bottom{background: #ff9a14; color: #17123a; padding: 1em 2em 0.2em; text-align: right; font-size: 0.8em;}
         @at-root #{&}__text{z-index: 10; position: relative;}
         @at-root #{&}__link{display: inline-block; font-size: 0.8em; margin: 0px 5px; width: 30px; height: 30px; line-height: 30px; border-radius: 50%; text-align: center; position: relative; z-index: 1; color: #ff9a14; color: #17123a; box-shadow: 0 0 0 2px #ff9a14; transition: color 0.3s;
@@ -69,6 +148,15 @@
             &:hover:after{transform: scale(0); opacity: 0;
                 transition: transform 0.4s, opacity 0.2s;}
             &:hover{color: #fff; transition: 0s;}
+        }
+    }
+}
+
+@media (max-width:540px) {
+    .footer{
+        .footer{
+            @at-root #{&}__top{display: none;}
+            @at-root #{&}__bottom{padding-top: 0.5em;}
         }
     }
 }

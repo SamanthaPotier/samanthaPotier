@@ -13,9 +13,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     "newsletter",
                     "mobile",
                 ],
-                "imageBig":"paysage_001",
-                "imageSmall":"paysage_002",
-                "imageMedium":"paysage_003",
+                "image":"akkaAeronews",
                 "subTitle": "Vêtement",
                 "description": "Création d'un modèle de newsletter, <span class='red'>réalisé en 2011</span> au sein de l'agence Websiting. Soun collection est une ligne de vêtements pour femmes.",
                 "intervention": "Conception graphique d'un modèle newsletter.",
@@ -28,7 +26,7 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             { 
                 "id": 1, 
-                "display": false,
+                "display": true,
                 "name": "Vidéo Thérapie",
                 "slug": "video-therapie",
                 "thumbnail": "http://samanthapotier.com/img/thumbnail/video-therapie.jpg",
@@ -36,7 +34,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     "newsletter",
                     "web"
                 ],
-                "image":"http://samanthapotier.com/img/screen/video-therapie-newsletter.jpg",
+                "image":"artDuFeu",
                 "subTitle": "Conseil",
                 "description": "Création d'un modèle de newsletter, réalisé en 2011 au sein de l'agence Websiting. Vidéo Thérapie est un service de conseil par vidéo conférence.",
                 "intervention":"Conception graphique d'un modèle newsletter.",
@@ -57,16 +55,17 @@ export class InMemoryDataService implements InMemoryDbService {
                     "web",
                     "web"
                 ],
-                "image":"http://samanthapotier.com/img/screen/pp-from-longwy-imac.jpg",
+                "image":"g2s",
                 "subTitle": "Bijoutier",
                 "description": "Projet scolaire, en groupe, <span style='color: red;'>réalisé</span> 2012 à l'IESA Multimédia Paris. Le brief donné était de réaliser un site internet dynamique sans utilisation de CMS. Nous avons choisi un vrai client : PP From Longwy, un créateur de bijoux.",
                 "intervention": "Intégration HTML/CSS responsive de toutes les pages du site internet (front office et back office).",
                 "sectors": [
-                    "dev",
-                    "responsive"
+                    "web",
+                    "responsive",
+                    "management"
                 ],
                 "linkToProject": "http://www.ppfromlongwy.com/",
-                "slider": false,
+                "slider": true,
             }
         ];
         return {projects};

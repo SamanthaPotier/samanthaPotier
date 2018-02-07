@@ -1,35 +1,61 @@
-<div>
-    <ul>
-        <li *ngFor="let project of projects"><a [routerLink]="['/projets', project.id]">{{project.name}}</a></li>
-    </ul>
-</div><!-- / .slider -->
-<div block="doing">
-    <div elem="sector">
-        <h2 elem="title"><i elem="icon" class="icon__"></i>Gestion de projet multimédia</h2>
-        <ul elem="list">
-            <li elem="item">Cahier des charges fonctionnels et techniques</li>
-            <li elem="item">Planning</li>
-            <li elem="item">Budget</li>
-            <li elem="item">Qualité Web : Opquast</li>
-        </ul><!-- / .doing__list -->
-    </div><!-- / .doing__sector -->
-    <div elem="sector">
-        <h2 elem="title"><i elem="icon" class="icon__"></i>Développement</h2>
-        <ul elem="list">
-            <li elem="item">HTML5 / CC3</li>
-            <li elem="item">jQuery</li>
-            <li elem="item">Responsive</li>
-            <li elem="item">Angular</li>
-            <li elem="item">Référencement naturel</li>
-        </ul><!-- / .doing__list -->
-    </div><!-- / .doing__sector -->
-    <div elem="sector">
-        <h2 elem="title"><i elem="icon" class="icon__"></i>Interface</h2>
-        <ul elem="list">
-            <li elem="item">Ergonomie</li>
-            <li elem="item">UI / UX Design</li>
-            <li elem="item">Architecture de l'information</li>
-            <li elem="item">Responsive Design : Web, Tablette et Mobile</li>
-        </ul><!-- / .doing__list -->
-    </div><!-- / .doing__sector -->
-</div><!-- / .doing -->
+<!-- <div *ngIf="project.slider = true"> -->
+    <ngx-carousel block="carousel"
+        [inputs]="carouselOne"
+        (carouselLoad)="myfunc($event)">
+        <!-- *ngIf="project.slider =='true'"  -->
+        <ngx-item NgxCarouselItem *ngFor="let project of projects">
+            <div elem="item">
+                <div elem="textPart">
+                    <p elem="title">{{project.name}}</p>
+                    <ul elem="projectSectors">
+                        <li *ngFor="let sector of project.sectors" elem="sectorItem"><i class="icon__{{ sector }} carousel__sectorIcon"></i>{{ sector }}</li>
+                    </ul>
+                    <a elem="button" [routerLink]="['/projets', project.id]"><i elem="iconButton" class="icon__seeproject"></i>Voir le projet</a>
+                </div>
+                <div elem="picturePart">
+                    <picture elem="picture">
+                        <source media="(min-width: 800px)" srcset="/assets/images/projects/{{ project.image }}_@1600.png">
+                        <source media="(min-width: 400px)" srcset="/assets/images/projects/{{ project.image }}_@800.png">
+                        <source media="(min-width: 200px)" srcset="/assets/images/projects/{{ project.image }}_@400.png">
+                        <img elem="image" src="/assets/images/projects/{{ project.image }}_@800.png" alt="{{ project.name }}">
+                    </picture>
+                </div>
+            </div>
+        </ngx-item>
+        <button NgxCarouselPrev elem="nav" mod="left"><i elem="icon" class="icon__prevslider"></i></button>
+        <button NgxCarouselNext elem="nav" mod="right"><i elem="icon" class="icon__nextslider"></i></button>
+    </ngx-carousel>
+<!-- </div> -->
+
+<div class="__innerContent">
+    <div block="doing">
+        <div elem="sector">
+            <h2 elem="title"><i elem="icon" class="icon__management"></i>Gestion de projet multimédia</h2>
+            <ul elem="list">
+                <li elem="item">Cahier des charges fonctionnels et techniques</li>
+                <li elem="item">Planning</li>
+                <li elem="item">Budget</li>
+                <li elem="item">Qualité Web : Opquast</li>
+            </ul><!-- / .doing__list -->
+        </div><!-- / .doing__sector -->
+        <div elem="sector">
+            <h2 elem="title"><i elem="icon" class="icon__dev"></i>Développement</h2>
+            <ul elem="list">
+                <li elem="item">HTML5 / CC3</li>
+                <li elem="item">jQuery</li>
+                <li elem="item">Responsive</li>
+                <li elem="item">Angular</li>
+                <li elem="item">Référencement naturel</li>
+            </ul><!-- / .doing__list -->
+        </div><!-- / .doing__sector -->
+        <div elem="sector">
+            <h2 elem="title"><i elem="icon" class="icon__graphism"></i>Interface</h2>
+            <ul elem="list">
+                <li elem="item">Ergonomie</li>
+                <li elem="item">UI / UX Design</li>
+                <li elem="item">Architecture de l'information</li>
+                <li elem="item">Responsive Design : Web, Tablette et Mobile</li>
+            </ul><!-- / .doing__list -->
+        </div><!-- / .doing__sector -->
+    </div><!-- / .doing -->
+</div>

@@ -1,1 +1,52 @@
-.button{background: red;}
+/*
+ * Buttons
+ * -------------------------------------------------- */
+
+[class*="__button"]{min-width: 50px; width: auto; display: inline-block; /*max-width: 250px;*/ padding: 1em 3em; border: none; background: #ff9a14; color: #ececed; vertical-align: middle; position: relative; z-index: 1; -webkit-backface-visibility: hidden; -moz-osx-font-smoothing: grayscale; border-radius: 10px; transition: background-color 0.3s, color 0.3s;}
+[class*="__button"]:before{content: ''; position: absolute; top: -20px; left: -20px; bottom: -20px; right: -20px; background: inherit; border-radius: 50px; z-index: -1; opacity: 0.4; transform: scale3d(0.8, 0.5, 1);}
+[class*="__button"]:focus{outline: none; outline-width: 0;}
+[class*="__button"]:hover{transition: background-color 0.1s 0.3s, color 0.1s 0.3s; color: #ececed; animation: anim-moema-1 0.3s forwards;}
+[class*="__button"]:hover:before{animation: anim-moema-2 0.3s 0.3s forwards;}
+
+@-webkit-keyframes anim-moema-1 {
+    60% {
+        -webkit-transform: scale3d(0.8, 0.8, 1);
+        transform: scale3d(0.8, 0.8, 1);
+    }
+    85% {
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes anim-moema-1 {
+    60% {
+        -webkit-transform: scale3d(0.8, 0.8, 1);
+        transform: scale3d(0.8, 0.8, 1);
+    }
+    85% {
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+@-webkit-keyframes anim-moema-2 {
+    to {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes anim-moema-2 {
+    to {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
