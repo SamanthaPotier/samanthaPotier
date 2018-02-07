@@ -131,7 +131,7 @@
 
 .footer{margin-top: auto;
     .footer{
-        @at-root #{&}__top{background: #17123a; color: #ececed; padding: 0.5em 2em; position: relative; margin-top: 2.5em;
+        @at-root #{&}__top{background: #17123a; color: #ececed; padding: 0.5em 2em; position: relative;
             &:before,
             &:after{content: ""; position: absolute; z-index: 0; left: 0; left: 0; width: 0; height: 0; border-style: solid;}
             &:before{border-width: 1.2em 0 0 100vw; border-color: transparent transparent transparent #17123a; top: -1.2em;}

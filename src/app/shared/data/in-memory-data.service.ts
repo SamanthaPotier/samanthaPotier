@@ -14,13 +14,13 @@ export class InMemoryDataService implements InMemoryDbService {
                 ],
                 "image":"akkaAeronews",
                 "subTitle": "Vêtement",
-                "description": "Création d'un modèle de newsletter, <span class='red'>réalisé en 2011</span> au sein de l'agence Websiting. Soun collection est une ligne de vêtements pour femmes.",
+                "description": "Création d'un modèle de newsletter, <span class='important'>réalisé en 2011</span> au sein de l'agence Websiting. Soun collection est une ligne de vêtements pour femmes.",
                 "intervention": "Conception graphique d'un modèle newsletter.",
                 "sectors": [
                     "graphisme",
                     "web"
                 ],
-                "linkToProject": "",
+                "linkToProject": "http://google.com",
                 "slider": true
             },
             { 
@@ -56,7 +56,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 ],
                 "image":"g2s",
                 "subTitle": "Bijoutier",
-                "description": "Projet scolaire, en groupe, <span style='color: red;'>réalisé</span> 2012 à l'IESA Multimédia Paris. Le brief donné était de réaliser un site internet dynamique sans utilisation de CMS. Nous avons choisi un vrai client : PP From Longwy, un créateur de bijoux.",
+                "description": "Projet scolaire, en groupe, <span class='important'>réalisé</span> 2012 à l'IESA Multimédia Paris. Le brief donné était de réaliser un site internet dynamique sans utilisation de CMS. Nous avons choisi un vrai client : PP From Longwy, un créateur de bijoux.",
                 "intervention": "Intégration HTML/CSS responsive de toutes les pages du site internet (front office et back office).",
                 "sectors": [
                     "web",
@@ -78,7 +78,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 ],
                 "image":"akkaAeronews",
                 "subTitle": "Vêtement",
-                "description": "Création d'un modèle de newsletter, <span class='red'>réalisé en 2011</span> au sein de l'agence Websiting. Soun collection est une ligne de vêtements pour femmes.",
+                "description": "Création d'un modèle de newsletter, <span class='important'>réalisé en 2011</span> au sein de l'agence Websiting. Soun collection est une ligne de vêtements pour femmes.",
                 "intervention": "Conception graphique d'un modèle newsletter.",
                 "sectors": [
                     "graphisme",
@@ -120,7 +120,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 ],
                 "image":"g2s",
                 "subTitle": "Bijoutier",
-                "description": "Projet scolaire, en groupe, <span style='color: red;'>réalisé</span> 2012 à l'IESA Multimédia Paris. Le brief donné était de réaliser un site internet dynamique sans utilisation de CMS. Nous avons choisi un vrai client : PP From Longwy, un créateur de bijoux.",
+                "description": "Projet scolaire, en groupe, <span class='important'>réalisé</span> 2012 à l'IESA Multimédia Paris. Le brief donné était de réaliser un site internet dynamique sans utilisation de CMS. Nous avons choisi un vrai client : PP From Longwy, un créateur de bijoux.",
                 "intervention": "Intégration HTML/CSS responsive de toutes les pages du site internet (front office et back office).",
                 "sectors": [
                     "web",
