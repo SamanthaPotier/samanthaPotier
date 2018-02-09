@@ -129,7 +129,7 @@
  * Footer
  * -------------------------------------------------- */
 
-.footer{margin-top: auto;
+.footer{margin-top: auto; position: relative; z-index: 900;
     .footer{
         @at-root #{&}__top{background: #17123a; color: #ececed; padding: 0.5em 2em; position: relative;
             &:before,

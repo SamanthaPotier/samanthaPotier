@@ -20,11 +20,8 @@
     </div><!-- / .projectDetails__textPart -->
 </div><!-- / .projectDetails -->
 
-
 <div block="projectNav" class="projectNav">
-    <p><button (click)="goBack()">Back</button></p>
+    <button elem="link" mod="prev" class="projectNav__link projectNav__link_prev"><i elem="icon" class="icon__prev projectNav__icon"></i>Nom du projet</button>
+    <button (click)="goBack()" elem="link" mod="back" class="projectNav__link projectNav__link_back"><i elem="icon" class="icon__arrowBack projectNav__icon"></i>Retour aux projets</button>
+    <button elem="link"  mod="next" class="projectNav__link projectNav__link_next">Nom du projet<i elem="icon" class="icon__next projectNav__icon"></i></button>
 </div><!-- / .projectNav -->
-
-
-
-

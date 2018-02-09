@@ -100,4 +100,24 @@
 /*
  * Nav between projects
  * -------------------------------------------------- */
-.projectNav{background: #bababa; padding-bottom: 2.5em;}
+.projectNav{background: #bababa; padding: 1.5em 2em 2.5em 2em; display: flex; flex-direction: row; justify-content: space-between;
+    .projectNav{
+        @at-root #{&}__link{color: #ececed; display: flex; align-items: center;
+            &:hover{color: #17123a;}
+        }
+        @at-root #{&}__link_prev{text-align: left;
+            .projectNav__icon{margin-right: 10px;}
+        }
+        @at-root #{&}__link_back{flex-direction: column;
+            .projectNav__icon{display: block; margin-bottom: 10px;}
+        }
+        @at-root #{&}__link_next{text-align: right;
+            .projectNav__icon{margin-left: 10px;}
+        }
+
+    }
+}
+
+@media (max-width:1024px) {
+    .projectNav{padding-left: 1em; padding-right: 1em;}
+}
