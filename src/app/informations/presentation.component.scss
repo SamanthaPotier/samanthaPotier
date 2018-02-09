@@ -1,0 +1,33 @@
+/*
+ * Presentation
+ * -------------------------------------------------- */
+.presentation{padding: 2em 2em 0 2em;
+    .presentation{
+        @at-root #{&}__adjectifs{color: #0e79b7; text-align: center; font-size: 1.3em; font-family: 'originextra_bold', Helvetica, Arial, sans-serif; line-height: 2em; padding: 0 1em;}
+        @at-root #{&}__title{color: #ff9a14; margin-top: 2em; margin-bottom: 0.5em;}
+        @at-root #{&}__diplomaList{margin-left: 2em;}
+        @at-root #{&}__diplomaItem{list-style: circle; padding-bottom: 0.5em;
+            &:last-child{padding-bottom: 0;}
+        }
+        @at-root #{&}__important{color: #0e79b7;}
+        @at-root #{&}__text{padding-bottom: 0.5em;
+            &:last-child{padding-bottom: 0;}
+        }
+        @at-root #{&}__textBlock{padding-bottom: 2em; height: 100%; overflow: auto;}
+        @at-root #{&}__content{display: flex; align-items: flex-end; height: 80vh; overflow: scroll; margin-top: 2em;}
+        @at-root #{&}__picture{height: auto; align-self: flex-end; position: fixed;}
+    }
+}
+
+@media (max-width:1024px) {
+    .presentation{padding-left: 2em; padding-right: 2em;}
+}
+
+@media (max-width:700px) {
+    .presentation{padding-left: 1em; padding-right: 1em;
+        .presentation{
+            @at-root #{&}__adjectifs{padding-left: 1em; padding-right: 1em; font-size: 1em;}
+            @at-root #{&}__content{height: inherit; overflow: initial; flex-direction: column;}
+        }
+    }
+}
