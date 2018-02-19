@@ -1,0 +1,32 @@
+//
+// Header
+// --------------------------------------------------
+
+// TOP HEADER
+#topHeader{background:@blueDark; border-top:3px solid @blueLight; padding:10px 0;
+    .content>p{
+        font-size: @fontSizeSmall; color:@white; float:right;
+        a {color:@white; text-decoration:underline;
+            &:hover{color:@grayLighter;}
+        }
+    }
+}
+
+// HEADER
+header{
+    background:url(../img/texture-fond.png) repeat @grayDark; color:@grayLighter; font-size:@fontSizeSmall; padding:15px 0 0;
+    nav{width:76%; float:left; margin:20px 0 0 0; 
+        li{float:left; margin:0 8% 0 0; font-size:@fontSizeLarge*0.7;  
+            &:last-child{margin-right:0;}
+            a{color:@grayLight; padding:0 0 26px 0;
+                span.picto{display:none;}
+                &:hover{color:@white;
+                    span.picto{background-position:-72px 0; width:12px; height:6px; display:block; margin:19px 0 0 38%;}
+                }
+            }
+        }
+        li.active{color:@white;
+                span.picto{background-position:-72px 0; width:12px; height:6px; display:block; margin:19px 0 0 38%;}
+        }
+    }
+}

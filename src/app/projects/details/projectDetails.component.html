@@ -13,9 +13,9 @@
         <p [innerHTML]="project.description" elem="description" class="projectDetails__description">{{ project.description }}</p>
         <p elem="titleIntervention" class="projectDetails__titleIntervention">Intervention</p>
         <p [innerHTML]="project.intervention" elem="intervention" class="projectDetails__intervention">{{ project.intervention }}</p>
-        <ul elem="projectDomains" class="projectDetails__projectDomains">
-            <li *ngFor="let domain of project.domains" class="projectDetails__domainItem" elem="domainItem"><i class="icon__{{ domain }} projectDetails__domainIcon"></i>{{ domain }}</li>
-        </ul>
+        <ul elem="projectSectors" class="projectDetails__projectSectors">
+            <li *ngFor="let sector of project.sectors" class="projectDetails__sectorItem" elem="sectorItem"><i class="icon__{{ sector}} projectDetails__sectorIcon"></i><span *ngIf="sector != 'management'">{{ sector }}</span><span *ngIf="sector === 'management'">Gestion de projet</span></li>
+        </ul><!-- / .projectDetails__projectSectors -->
         <a *ngIf="project.linkToProject" href="{{ project.linkToProject }}" target="_blank" class="button projectDetails__button" elem="button"><i class="icon__link projectDetails__iconLink"></i>Lien vers le projet</a>
     </div><!-- / .projectDetails__textPart -->
 </div><!-- / .projectDetails -->

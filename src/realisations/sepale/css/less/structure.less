@@ -1,0 +1,163 @@
+//
+// Strucuture
+// --------------------------------------------------
+.content{max-width:1000px; margin:0 auto; width:90%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#container{
+    section {
+        // Index.php
+        .service-sepale{width:80%; margin:33px auto 0;
+            li{border:solid 1px @blueLight; width:22%; margin:0 4% 0 0; background:@white; float:left;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+                &:last-child{margin-right:0;}
+                p{padding:7px 10px;
+                    &:first-child{background:@blueLight;}
+                }
+            }   
+        }
+        // Index.php
+        .conseils figure{background:@white; float:left; width:23.5%; margin:0 2% 0 0; border:solid 5px @white;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+            &:last-child{margin-right:0;}
+            img{width:100%; margin:0 0 10px;}
+        }
+        // Conseils.php
+        .conseil{float:left; width:30%; margin:0 5% 40px 0; border:solid 1px @grayDark; position:relative;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+            &:nth-child(3n+1){margin:0;}
+            img{width:100%;
+            -webkit-border-radius: 5px 5px 0 0;
+            -moz-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+            }
+            .categorie-conseil{background:@blueLight; width:80%; position:absolute; top:107px; margin:0 0 0 10%; padding:10px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+                img{float:left; width:23%; margin:0 10px 0 0;}
+                div{margin:4px 0 0; text-align:left;
+                    p{color:@grayDark;  font-size:@fontSizeSmall;
+                        &:first-child{color:@white; font-size:@fontSizeLarge*0.8;}  
+                    }             
+                }        
+                
+            }
+            &>p{color:@white; font-size:@fontSizeSmall; text-align:left; background:@grayDark; border-top:solid 1px @blueLighter; padding:50px 20px 20px; height:240px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            }
+            ul{border-top:solid 1px @grayLight; color:@grayLight; background:@grayDark;
+                li{float:left; width:33.334%; background:@grayDark; border-right:solid 1px @grayLight;  padding:5px 10px;  cursor:pointer;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                    &:last-child{border-right:0;}
+                    &:hover i, i.active{color:@blueLight;}
+                    p{text-align:center; color:@grayLight;}
+                }
+            }
+        }
+        // Présentation.php
+        .personne-presentation{width:17%; margin:0 9% 4% 0; float:left; position:relative;
+            &:nth-child(4n+1){margin:0;}
+            figure.personne{cursor:pointer;
+                img{width:100%;}
+                figcaption{color:@blueLight; font-size:@fontSizeLarge*0.9; margin:5px 0 0 0;}
+                p{margin:6px 0 3px;
+                    i{color:@grayLight;
+                        &:hover{color:#32aadc}
+                    }
+                }
+            }
+            .contentTooltip{background:@white; padding:20px; position:absolute; top:50%; left:50%; z-index:200; text-align:left; width:450px;
+            -webkit-box-shadow: 0px 0px 10px 0px #202123;
+            box-shadow: 0px 0px 10px 0px #202123; 
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+                &.tooltipLeft{left:-214%;}
+            }
+        }
+        
+
+
+        // essentiels.php
+        .planche-selection{border:solid 1px @grayDark; padding:0; width:99.6%; margin:12px 0 0; background:@grayDark;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+            .col{float:left; margin:0; padding:0;
+                &:first-child{width:27.48%;
+                    img{
+                    -webkit-border-radius: 5px 0 0 5px;
+                    -moz-border-radius: 5px 0 0 5px;
+                    border-radius: 5px 0 0 5px;
+                    }
+                }
+                &:nth-child(2){width:22.62%;}
+                &:nth-child(3){width:28.9%;}
+                &:last-child {float:right; width:21%;
+                    img{
+                    -webkit-border-radius: 0 5px 5px 0;
+                    -moz-border-radius: 0 5px 5px 0;
+                    border-radius: 0 5px 5px 0;
+                    }
+                }
+                img{margin:0; padding:0; float:none; display:block; width:100%;}
+                a {
+                    div{width:100%; height:100%; position:relative;
+                        .bt-plus{top:43%; left:43%; position:absolute; opacity:0.7;}
+                    }      
+                }
+                a:hover .bt-plus{opacity:1}
+            }
+        }
+        .decouvrir-autre-tableau{background:@whiteLight; position:relative; width:300px; margin:0 auto; z-index:500;}
+        // Contact.php
+        &.col-contact{width:50%; float:left;
+            ul{background:@blueLight; width:95%; padding:0 20px; color:@white; text-align:left;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius:  0 0 10px 10px;
+            -moz-border-radius:  0 0 10px 10px;
+            border-radius:  0 0 10px 10px;
+                li{border-bottom:solid 1px @blueLighter; padding:10px 0; position:relative;
+                    &:last-child{border:none;}
+                    .contact-infos{position:absolute; top:25px; left:66px;}
+                }
+            }
+            img{width:95%; display:block;
+            -webkit-border-radius: 10px 10px 0 0;
+            -moz-border-radius: 10px 10px 0 0;
+            border-radius: 10px 10px 0 0;
+            }
+            form{margin:0 0 0 80px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+                p{text-align:left; text-transform:uppercase; color:@blueLight; margin:10px 0;
+                    &:first-child{margin-top:0;}
+                    &:last-child{clear:both; font-size:@fontSizeSmall; padding-top:20px;}
+                    input, textarea{width:100%; background:@whiteDark; border:solid 1px @blueLight; padding:10px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                        &:focus{background:@whiteLight; border-color:@grayDark;
+                        }
+                    }
+                    &.champs-obligatoires{text-align:right; font-size:@fontSizeSmall*0.9;}
+                }
+            }
+        }
+    }
+}

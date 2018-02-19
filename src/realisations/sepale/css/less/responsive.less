@@ -1,0 +1,223 @@
+//
+// Responsive
+// --------------------------------------------------
+
+
+@media (max-width: 1110px) {
+    h1{margin:0 5% 0 3%;}
+    .infos li{margin-right:8%;}    
+}
+
+
+//
+// Responsive : portrait Tablet
+// --------------------------------------------------
+
+@media (max-width: 768px) {
+    .display-none-tablet-mobile, .display-mobile{display:none;}
+    .display-tablet-mobile{display:block;}
+    h1{float:none;  margin:0 auto;}
+    // Header
+    header{min-height:213px;
+        .infos{float:none; margin:0; width:100%; margin-top:20px;
+            li{margin-right:9%;}
+        }
+        nav{width:100%; float:none;
+            li{margin-right:11%;}
+        }   
+    }
+    // Photo header
+    .photo {background-image:url(../img/photo-paris-medium.jpg);
+        p{font-size:@fontSizeLarge;}
+    }
+    .categorie{width:50%;}
+    #container{
+        section {
+            // index.php
+            .service-sepale{width:100%;
+                li{width:48%; margin:0 4% 0 0;
+                    &:first-child{margin-bottom:4%;}
+                    &:last-child, &:nth-child(2){margin-right:0;}
+                }   
+            }
+            //index.php
+            .conseils figure{width:44%; margin:0 12% 0 0;
+                &:first-child, &:nth-child(2){margin-bottom:8%;}
+                &:last-child, &:nth-child(2){margin-right:0;}
+            }
+            //conseils.php
+            .conseil{float:left; width:47%; margin:0 6% 40px 0;
+                &:nth-child(3n+1){margin:0 6% 40px 0;}
+                &:nth-child(odd){margin:0;}
+                .categorie-conseil{top:107px;
+                    img{float:left; width:23%; margin:0 10px 0 0;}                  
+                }
+            }
+            //contact.php
+            &.col-contact{
+                form{margin:0 0 0 10px;
+                    &>p:last-child{font-size:@fontSizeSmall*0.8;}
+                }
+            }
+        }
+    }
+    // Footer
+    footer{
+        img{background:url(../img/plan-medium.jpg;)}
+        .content{
+            div{width:50%;
+                &.reseaux-sociaux{width:100%; float:none; clear:both; padding-top:20px;
+                    ul li{margin:0 7%; 
+                        i{font-size:@fontSizeLarge*1.7;}
+                    }
+                }
+                
+            }
+            // Bottom Footer
+            &:last-child{padding:10px 0; border-bottom:none;
+                p{float:none; width:100%; border-top:solid 1px @grayLight; padding-top:10px; font-size:@baseFontSize;}
+                ul.infos{display:inline-block; width:100%!important; float:none; margin:20px 0!important;
+                    li {width:33%;
+                        p{border:none; padding:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//
+// Responsive : portrait Mobile
+// --------------------------------------------------
+
+@media (max-width: 480px){
+    #topHeader, .infos, .display-none-mobile{display:none;}
+    .display-mobile{display:block;}
+    h1{width:72px; height:66px; background-size:100%;}
+    h2{font-size:@fontSizeLarge*0.7; padding:0 15px;
+        &.deuxlignes{padding:0;}
+    }
+    .title .border-title.deuxlignes{top:36px;}
+    .title .border-title{top:15px;}
+
+    // HEADER
+    header{min-height:auto; padding-bottom:15px; position:relative; max-height:66px; height:66px; min-height:66px; width:100%;
+        .content{width:100%;
+            nav{width:100%; float:none; background:@grayDark; z-index:500; display:none; position:relative; margin:0 0 0 0;
+                //&.active-nav-mobile{}
+                li{float:none; margin:0; width:100%; border-bottom:solid 1px @grayLight;
+                background: #202123; /* Old browsers */
+                background: -moz-linear-gradient(top,  #202123 0%, #000000 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#202123), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #202123 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #202123 0%,#000000 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #202123 0%,#000000 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  #202123 0%,#000000 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202123', endColorstr='#000000',GradientType=0 ); /* IE6-9 */         
+                    &:last-child{border:none;}
+                    a{width:100%; padding:15px 0; display:block;
+                        &:hover{
+                                span.picto{display:none;}
+                        }
+                    }
+                }
+                li.active{padding:15px 0; display:block;
+                        span.picto{display:none;}
+                }
+            }
+            a.nav{position:absolute; top:0; right:0; width:70px; height:96px; border-left:solid 1px @grayLight; padding:37px 0 0 0;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            }
+        }
+    }
+    
+    // Photo header
+    .photo {height:100px;
+        p{font-size:@baseFontSize*0.9; padding:10px 0;}
+    }
+    
+     #container{
+        section {
+            // index.php
+            .service-sepale{width:80%; float:none;
+                li{width:100%; margin:0 0 4% 0; clear:both;
+                    p{float:left; font-size:@baseFontSize*0.7;
+                        &:first-child{width: 21%;} 
+                        &:last-child{width:61%; border-left:solid 1px @blueLighter; margin-left:3px; text-align:left; padding:11px 10px;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                        }
+                    }
+                }   
+            }
+            //index.php
+            .conseils {width:80%; margin:0 auto; 
+                figure{width:100%; float:none; margin-bottom:8%;
+                    &:first-child, &:nth-child(2){margin-bottom:8%;}
+                }
+            }
+            //presentation.php
+            .personne-presentation{width:50%; margin:0 auto 12%; float:none;
+                &:nth-child(4n+1){margin:0 auto 12%;}
+                .contentTooltip{left:-45%; z-index:200;  width:195%;
+                    &.tooltipLeft{left:-45%;}
+                }
+            }
+            
+            
+            //conseils.php
+            .conseil{float:none; width:100%; margin:0 0 40px 0;
+                &:nth-child(3n+1){margin:0 0 40px 0;}
+                &:nth-child(odd){margin:0 0 40px 0;}
+            }
+            //essentiels.php
+            .subtitle{
+                .categorie {width:82%;
+                    p{font-size:0.8em;
+                        &:first-child{font-size:0.9em;}
+                    }
+                }
+            }
+            // Contact.php
+            &.col-contact{width:100%; float:none;
+                img, ul{width:100%;}
+            }
+        }
+     }
+    
+    // FOOTER
+    footer{
+        .content1:after{left:42.3%;}
+        .content{
+            div{float:none; width:100%; margin-bottom:20px;
+                &:nth-child(2){padding:20px 0 0 0; border-top: solid 1px @grayLight;
+                    .nav-sous-menu{background:#2d2f31; border:solid 1px @grayLight; color:@white; padding:10px; font-size:@fontSizeLarge;
+                        span.nav-mobile{margin-left:26px;}
+                    }
+                    ul{background:#2d2f31; border:solid 1px @grayLight; display:none;
+                        li{border-bottom:solid 1px @grayLight; padding:0;
+                            &:last-child{border-bottom:none;}
+                            a{padding:10px; width:100%; display:block; color:@white;}
+                        }
+                    }
+                }           
+                form input .envoyer{font-size:@fontSizeSmall;}
+                &.reseaux-sociaux{
+                    p{text-align:left;}
+                    ul {float:none;
+                        li{margin:0 6% 0 0; 
+                            i{font-size:@fontSizeLarge;}
+                        }
+                    }
+                }
+            }
+            // Bottom Footer
+            &:last-child ul.infos  li {width:100%; padding-bottom:10px;}
+        }
+    }
+    /* Bouton Backtop */
+    #IDdubouton{position:fixed; padding:12px; right:10px; bottom:35px; opacity:0.8; border:none; z-index:1000;}
+}

@@ -1,7 +1,7 @@
 <div block="projects" class="projects">
     <ul elem="list" class="projects__list">
-        <figure *ngFor="let project of projects" (click)="onSelect(project)" elem="item" class="projects__item">
-            <img elem="picture" class="projects__picture" src="{{ project.thumbnail }}" alt="{{ project.name }}">
+        <figure *ngFor="let project of projects?.reverse()" (click)="onSelect(project)" elem="item" class="projects__item">
+            <img elem="picture" class="projects__picture" src="/assets/images/projects/{{ project.thumbnail }}_thumbnail.jpg" alt="{{ project.name }}">
             <figcaption elem="caption" class="projects__caption">
                 <ul elem="projectDomains" class="projects__projectDomains">
                     <li *ngFor="let domain of project.domains" elem="domainItem" class="projects__domainItem"><i class="icon__{{ domain }}"></i></li>

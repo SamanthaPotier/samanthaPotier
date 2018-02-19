@@ -1,0 +1,5 @@
+READ ME
+
+Site développé en HTML5/ CSS3
+
+Le CSS est fait en LESS avec le logiciel "Crunch" : http://crunchapp.net/

@@ -1,0 +1,41 @@
+//
+// Footer
+// --------------------------------------------------
+
+footer{width:100%; background:@grayDark; color:@white;
+    img{width:100%;}
+    .content{margin:0 auto; padding:42px 0; position:relative;
+        div{float:left; width:33%;
+            &:nth-child(2){padding:0 0 0 42px; 
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            }
+            form {padding:0; margin:0; text-align:left;
+                input{border:solid 1px @grayLight; padding:3px;
+                    &.envoyer{background:@blueLight; border:solid 1px #6494bc; color:@white; text-transform:uppercase; margin-left:5px; font-size:@fontSizeSmall*0.8; padding:6px 5px 4px 5px;}
+                }
+            }
+            p.blue{margin:40px 0 3px;}
+            ul li {text-align:left; padding:0 0 10px;
+                a{ color:@blueLight; font-size:@baseFontSize;
+                    &:hover{color:@blueLighter;}
+                }
+            }
+        }
+        &:last-child{padding:10px 0; border-bottom:none;
+            p{float:left; width:22%; font-size:@fontSizeSmall*0.9; }
+            ul.infos{display:inline-block; color:@grayLighter; width:66%!important; float:right; margin:0!important; padding:0!important;
+                li {margin:0; width:25%;
+                    p{
+                        &:first-child{width:100%;}
+                        &:last-child{color:@grayLight; width:100%;}
+                    }
+                }
+            }
+        }
+    }
+    .content1:after{content:""; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 25px solid @grayDark;  position:absolute; left:47.3%; top:-24px;}
+        
+    p, a{font-size:@fontSizeSmall; text-align:left;}
+    p:first-child{font-size:@baseFontSize;}
+}

@@ -25,9 +25,9 @@
         }
         @at-root #{&}__titleIntervention{color: #17123a; margin-top: 1em; font-size: 0.9em;}
         @at-root #{&}__intervention{padding-right: 4em; font-size: 0.9em;}
-        @at-root #{&}__projectDomains{display: flex; justify-content: center; margin: 3em 3em 3em -3em;}
-        @at-root #{&}__domainItem{text-transform:uppercase; margin: 0 2em; display: flex; flex-direction: column; align-items: center;}
-        @at-root #{&}__domainIcon{font-size: 3em; margin-bottom: 0.2em;}
+        @at-root #{&}__projectSectors{display: flex; flex-wrap: wrap; justify-content: center; margin: 3em 3em 3em -3em;}
+        @at-root #{&}__sectorItem{text-transform:uppercase; margin: 0.5em 1.5em; display: flex; flex-direction: column; align-items: center;}
+        @at-root #{&}__sectorIcon{font-size: 3em; margin-bottom: 0.2em;}
         @at-root #{&}__button{font-size: 1.2em; margin: 0 auto;}
         @at-root #{&}__iconLink{margin-right: 0.5em;}
     }

@@ -64,9 +64,12 @@
 .icon__arrowBack:before{content: "\e900";}
 .icon__close:before{content: "\e600";}
 .icon__contact:before{content: "\e601";}
-.icon__dev:before{content: "\e602";}
-.icon__graphisme:before{content: "\e603";}
-.icon__identity:before{content: "\e604";}
+.icon__developpement:before{content: "\e602";}
+.icon__graphisme:before,
+.icon__webdesign:before,
+.icon__wireframe:before,
+.icon__design:before{content: "\e603";}
+.icon__identite:before{content: "\e604";}
 .icon__link:before{content: "\e605";}
 .icon__linkedin:before{content: "\e606";}
 .icon__management:before{content: "\e607";}
