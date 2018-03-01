@@ -16,6 +16,8 @@
         @at-root #{&}__textBlock{padding-bottom: 2em; height: 100%; overflow: auto;}
         @at-root #{&}__content{display: flex; align-items: flex-end; height: 80vh; overflow: scroll; margin-top: 2em;}
         @at-root #{&}__picture{height: auto; align-self: flex-end; position: fixed;}
+        @at-root #{&}__contact{margin-top: 2em;}
+        @at-root #{&}__at{color: #ff9a14; font-weight: bold; margin: 0 0.3em;}
     }
 }
 

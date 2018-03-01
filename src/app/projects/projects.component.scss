@@ -6,8 +6,9 @@
  * -------------------------------------------------- */
 .projects{
     .projects{
-        @at-root #{&}__list{display: flex; flex-wrap: wrap; justify-content: center; max-width: 1800px; margin: 1em auto;}
-        @at-root #{&}__item{position: relative; overflow: hidden; text-align: center; cursor: pointer; background: linear-gradient(-45deg, #0e79b7 0%,#17123a 100%); margin: 1%; border: solid 1px #bababa; max-width: 22%;}
+        @at-root #{&}__list{display: flex; flex-wrap: wrap; justify-content: center; max-width: 1800px; margin: 0 auto;}
+        @at-root #{&}__item{position: relative; overflow: hidden; text-align: center; cursor: pointer; max-width: 25%;}
+        @at-root #{&}__itemFig{background: linear-gradient(-45deg, #0e79b7 0%,#17123a 100%); overflow: hidden; border: solid 1px #bababa; }
         @at-root #{&}__picture{transition: opacity 0.35s, transform 0.35s;}
         @at-root #{&}__projectButton{transition: opacity 0.35s, transform 0.35s;}
         @at-root #{&}__picture{display: block; min-height: 100%; max-width: 100%; opacity: 0.9;}
@@ -29,7 +30,7 @@
 @media (max-width: 860px) {
     .projects{
         .projects{
-            @at-root #{&}__item{max-width: 30%;}
+            @at-root #{&}__item{max-width: 33.3%;}
             @at-root #{&}__caption{padding: 1.5em 1em;}
             @at-root #{&}__domainItem{font-size: 200%;}
         }
@@ -39,7 +40,7 @@
 @media (max-width: 530px) {
     .projects{
         .projects{
-            @at-root #{&}__item{max-width: 45%;}
+            @at-root #{&}__item{max-width: 50%;}
             @at-root #{&}__caption{padding: 2em 1em;}
             @at-root #{&}__domainItem{font-size: 250%;}
         }

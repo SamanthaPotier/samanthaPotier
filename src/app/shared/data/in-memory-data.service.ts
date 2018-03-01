@@ -114,7 +114,7 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
                 "id": 6,
-                "display": true, 
+                "display": false, 
                 "name": "PP From Longwy",
                 "slug": "pp-from-longwy",
                 "thumbnail": "ppFromLongwy",
@@ -133,7 +133,7 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
                 "id": 7,
-                "display": true, 
+                "display": false, 
                 "name": "Jeff Photographe",
                 "slug": "jeff-photographe",
                 "thumbnail": "jeffPhotographe",
@@ -234,7 +234,7 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
                 "id": 12,
-                "display": true, 
+                "display": false, 
                 "name": "Chocolats Vilas Boas",
                 "slug": "chocolats-vilas-boas",
                 "thumbnail": "chocolatsVilasBoas",
@@ -315,7 +315,7 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
                 "id": 16,
-                "display": true, 
+                "display": false, 
                 "name": "Capitaine House",
                 "slug": "capitaine-house",
                 "thumbnail": "capitaineHouse",
@@ -394,7 +394,7 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
                 "id": 20,
-                "display": true, 
+                "display": false, 
                 "name": "Intérieurs Gontier",
                 "slug": "interieurs-gontier",
                 "thumbnail": "interieursGontier",
@@ -478,7 +478,7 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
                 "id": 24,
-                "display": true, 
+                "display": false, 
                 "name": "AKKA Emailing",
                 "slug": "akka-emailing",
                 "thumbnail": "akkaEmailing",
@@ -498,7 +498,7 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
                 "id": 25,
-                "display": true, 
+                "display": false, 
                 "name": "AKKA Aeronews",
                 "slug": "akka-aeronews",
                 "thumbnail": "akkaAeronews",

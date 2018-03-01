@@ -4,7 +4,7 @@
 
 .header{border-top: solid 3px #ff9a14; background: #17123a; padding: 0 2em;
     .header{
-        @at-root #{&}__innerContent{display: flex; flex-wrap: nowrap; align-items: flex-end; justify-content: space-between;}
+        @at-root #{&}__innerContent{display: flex; flex-wrap: nowrap; align-items: stretch; justify-content: space-between;}
     }
 }
 
@@ -24,8 +24,13 @@
     }
 }
 
-.nav{
+.nav{display: flex; flex-direction: column; justify-content: space-between;
     .nav{
+        @at-root #{&}__download{align-self: flex-end; margin-right: 2em;}
+        @at-root #{&}__downloadLink{background: #ff9a14; display: block; padding: 0.5em 1em; border-radius: 0 0 20px 20px; font-size: 0.8em; color: #17123a;
+            &:hover{padding-top: 1em;}
+        }
+        @at-root #{&}__icon{margin-right: 0.5em;}
         @at-root #{&}__list{display: flex; justify-content: flex-end; flex-wrap: nowrap;}
         @at-root #{&}__item{margin-right: 8px;
             &:last-child{margin-right: 0;}
@@ -52,6 +57,9 @@
 .sidebarContainer{
     .sidebarContainer{
         @at-root #{&}__menuContent{background: #17123a; color: #ececed; height: 100vh; width: 300px;}
+        @at-root #{&}__download{text-align: center; margin-top: 4em;}
+        @at-root #{&}__downloadLink{padding: 0.5em 1em; font-size: 0.8em; display: block; background: #ff9a14; width: 60%; color: #17123a; margin: 0 auto; border-radius: 10px;}
+        @at-root #{&}__icon{margin-right: 0.5em;}
     }
 }
 
@@ -102,6 +110,7 @@
     }
     .nav{
         .nav{
+            @at-root #{&}__download{position: absolute; top: 0; right: 0em;}
             @at-root #{&}__link{padding-top: 1em; padding-bottom: 1em;}
         }
     }
@@ -156,7 +165,7 @@
     .footer{
         .footer{
             @at-root #{&}__top{display: none;}
-            @at-root #{&}__bottom{padding-top: 0.5em;}
+            @at-root #{&}__bottom{padding-top: 0.3em;}
         }
     }
 }
