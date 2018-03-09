@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class CareerComponent {
+    selectedIndex = -1;
+    setSelected(id: number) {
+        this.selectedIndex = id;
+     }
 }

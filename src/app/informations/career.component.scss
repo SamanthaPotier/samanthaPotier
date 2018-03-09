@@ -1,0 +1,63 @@
+/*
+ * Career
+ * -------------------------------------------------- */
+
+.career{display: flex; justify-content: space-between;
+    .career{
+        @at-root #{&}__experienceTitle{display: flex; flex-direction: column; justify-content: space-around; margin-left: 2em; height: calc(100vh - 100px); overflow: auto; position: relative; width: 91px; min-width: 91px!important; 
+            &:before{content:""; position: absolute; z-index: -1; height: 82%; width: 3px; background: #bababa; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+        }
+        @at-root #{&}__compagny{border: solid 3px #bababa; border-radius: 100%; background: #ececed; text-align: center; width: 85px; height: 85px; margin: 0.5em 0; display: flex; align-items: center; font-size: 0.8em; line-height: 1em; justify-content: center;
+            &:last-child{margin-bottom: 1.5em;}
+        }
+        @at-root #{&}__compagny_select{background: #0e79b7; color: #ececed;}
+        
+        @at-root #{&}__experienceDescription{height: calc(100vh - 100px); overflow: auto; width: 100%; padding: 0 4em 0 6em;}
+        @at-root #{&}__details{min-height: 100%; padding: 2em 0; margin-bottom: 100px; display: flex; flex-direction: column; justify-content: center; position: relative;
+            &:last-child{margin-bottom: 0;}
+        }
+        @at-root #{&}__details .icon__seeproject{margin-right: 0.5em;}
+        @at-root #{&}__logo{position: absolute; bottom: 20px; right: -50px; max-width: 200px;}
+   }
+}
+
+.career__details{
+    .career{
+        @at-root #{&}__title{color: #0e79b7; font-size: 1.3em;}
+        @at-root #{&}__date{font-style: italic;}
+        @at-root #{&}__function{color: #0e79b7; margin-top: 1em;}
+        @at-root #{&}__text{margin-top: 1em;}
+        @at-root #{&}__textList{margin-left: 2em;}
+        @at-root #{&}__item{list-style: circle; padding-bottom: 0.1em;}
+        @at-root #{&}__button{margin-top: 2em;}
+    }
+}
+
+
+@media (max-width: 760px) {
+    .career{flex-direction: column; padding-left: 0; padding-right: 0;
+        .career{
+            @at-root #{&}__experienceTitle{flex-direction: row; justify-content: space-between; margin-top: 1em; margin-left: 0; width: 100%; height: auto; flex-wrap: nowrap;
+                &:before{display: none;}
+            }
+            @at-root #{&}__compagny{margin: 0 1em; min-width: 85px; position: relative;
+                &:last-child{
+                    &:after{display: none;}
+                }
+                &:after{content: ""; height: 3px; width: 80px; position: absolute; left: 85px; background: #bababa; top: 50%;}
+            }
+            @at-root #{&}__experienceDescription{padding: 0 1em; height: calc(100vh - 200px); box-sizing: border-box;}
+            @at-root #{&}__logo{position: relative; align-self: flex-end; margin-top: 2em; right: 0; bottom: auto;}
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .career{
+        .career{
+            @at-root #{&}__compagny{font-size: 0.6em; width: 60px; min-width: 60px; height: 60px;
+                &:after{left: 60px;}
+            }
+        }
+    }
+}

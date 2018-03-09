@@ -1,4 +1,97 @@
-<h1>Career</h1>
-<div>
-    
-</div>
+<div block="career" class="__innerContent">
+    <ul elem="experienceTitle">
+        <li elem="compagny" scrollTo scrollTargetSelector="#akkads" [ngClass]="{'career__compagny_select': selectedIndex == 1}" (click)="setSelected(1)">AKKA DS</li>
+        <li elem="compagny" scrollTo scrollTargetSelector="#freelance" [ngClass]="{'career__compagny_select': selectedIndex == 2}" (click)="setSelected(2)">Freelance</li>
+        <li elem="compagny" scrollTo scrollTargetSelector="#acpaweb" [ngClass]="{'career__compagny_select': selectedIndex == 3}" (click)="setSelected(3)">ACPA Web</li>
+        <li elem="compagny" scrollTo scrollTargetSelector="#websiting" [ngClass]="{'career__compagny_select': selectedIndex == 4}" (click)="setSelected(4)">Websiting</li>
+        <li elem="compagny" scrollTo scrollTargetSelector="#iesa" [ngClass]="{'career__compagny_select': selectedIndex == 5}" (click)="setSelected(5)">IESA Multimédia Paris</li>
+    </ul><!-- / .career__experienceTitle -->
+
+    <div elem="experienceDescription">
+        <div elem="details" id="akkads">
+            <h3 elem="title">AKKA DS</h3>
+            <p elem="date">Octobre 2015 - Aujourd'hui, en CDI</p>
+            <h4 elem="function">Experte Front-End</h4>
+            <p elem="text">Gestion de projet clients (méthode Agile)</p>
+            <ul elem="textList">
+                <li elem="item">Rédaction du Product Backlog et Specifications fonctionnelles</li>
+                <li elem="item">Suivi et gestion du planning (Jira, Trello)</li>
+                <li elem="item">Participation aux propales</li>
+            </ul><!-- / .career__textList -->
+            <p elem="text">Front-End (sites web et applications)</p>
+            <ul elem="textList">
+                <li elem="item">Animation d'ateliers UX chez les clients et restitution</li>
+                <li elem="item">UX : création des wireframes interactifs (Adobe XD / Illustrator)</li>
+                <li elem="item">UI : déclinaison ou création de la couche graphique (Photoshop)</li>
+                <li elem="item">Intégration HTML/CSS/JS des sites et applications (en collaboration avec les développeurs back)</li>
+                <li elem="item">Framework : Symfony, Silex, Twig, Angular, VueJS</li>
+            </ul><!-- / .career__textList -->
+            <p elem="text">Projets internes</p>
+            <ul elem="textList">
+                <li elem="item">Déclinaison de la charte graphique sur l'ensemble des documents</li>
+                <li elem="item">Création d'applications internes : RAM, Congés, Notes de frais, Back-Office</li>
+                <li elem="item">Développement et mis à jour du site web</li>
+            </ul><!-- / .career__textList -->
+            <p><a href="http://akka.digital/" target="_blank" elem="button"><i class="icon__seeproject"></i>Voir le site web</a></p>
+            <img elem="logo" src="/assets/images/logo-akkads.png" alt="ACPA Web">
+        </div><!-- / .career__details -->
+        <div elem="details" id="freelance">
+            <h3 elem="title">Freelance</h3>
+            <p elem="date">Janvier 2013 - Octobre 2015, en auto-entrepreneur</p>
+            <h4 elem="function">Gestion de projet multimédia - Développement front-end - UX/UI Design</h4>
+            <p elem="text">Voici l'ensemble des prestations proposées</p>
+            <ul elem="textList">
+                <li elem="item">Définition et cadrage du besoin</li>
+                <li elem="item">Webdesign et UX Design</li>
+                <li elem="item">Développement front-end</li>
+            </ul><!-- / .career__textList -->
+            <img elem="logo" src="/assets/images/logo-samantha-potier-light.png" alt="SP">
+        </div><!-- / .career__details -->
+        <div elem="details" id="acpaweb">
+            <h3 elem="title">ACPA Web</h3>
+            <p elem="date">Octobre 2011 - Juillet 2015, en alternance</p>
+            <h4 elem="function">Développement front-end - UX/UI Design - Maquettes print - Mise en page d'un annuaire</h4>
+            <p elem="text">Autour du web</p>
+            <ul elem="textList">
+                <li elem="item">Maquettes de site web</li>
+                <li elem="item">Intégration HTML/CSS</li>
+                <li elem="item">Développement de sites sous les CMS Joomla et Pulse Content</li>
+                <li elem="item">Référencement naturel</li>
+                <li elem="item">Formations client</li>
+            </ul><!-- / .career__textList -->
+            <p elem="text">Autour du print</p>
+            <ul elem="textList">
+                <li elem="item">Mise en page de "l'Annuaire de ville", annuaire papier des professionnels des Yvelines et maquettes des espaces publicitaires</li>
+                <li elem="item">Flyers, Affiches, Cartes de visite...</li>
+            </ul><!-- / .career__textList -->
+            <p><a href="http://www.acpaweb.com/" target="_blank" elem="button"><i class="icon__seeproject"></i>Voir le site web</a></p>
+            <img elem="logo" src="/assets/images/logo-acpaweb.png" alt="ACPA Web">
+        </div><!-- / .career__details -->
+        <div elem="details" id="websiting">
+            <h3 elem="title">Websiting</h3>
+            <p elem="date">Avril 2011 - Juillet 2011, en stage</p>
+            <h4 elem="function">Développement front-end - Maquettes Web - Newsletter</h4>
+            <p elem="text">Autour du web</p>
+            <ul elem="textList">
+                <li elem="item">Maquettes de site web</li>
+                <li elem="item">Intégration HTML/CSS</li>
+                <li elem="item">Animation Flash</li>
+            </ul><!-- / .career__textList -->
+            <p><a href="http://websiting.fr/" target="_blank" elem="button"><i class="icon__seeproject"></i>Voir le site web</a></p>
+            <img elem="logo" src="/assets/images/logo-websiting.png" alt="Websiting">
+        </div><!-- / .career__details -->
+        <div elem="details" id="iesa">
+            <h3 elem="title">IESA Multimédia Paris</h3>
+            <p elem="date">Septembre 2010 - Septembre 2015, étudiante</p>
+            <h4 elem="function">Licence Chef de projet multimédia - Master Expert en Stratégie Digitale</h4>
+            <p elem="text">Autour du web</p>
+            <ul elem="textList">
+                <li elem="item">Obtention d'un Master Expert en Stratégie Digital, Titre certifié de niveau I "Directeur de projet multimédia", avec mention très bien</li>
+                <li elem="item">Obtention de la Licence en édition et communication numérique Titre certifié de niveau II "Chef de projet multimédia", avec mention très bien</li>
+            </ul><!-- / .career__textList -->
+            <p><a href="https://www.iesamultimedia.fr/" target="_blank" elem="button"><i class="icon__seeproject"></i>Voir le site web</a></p>
+            <img elem="logo" src="/assets/images/logo-iesa-multimedia-paris.png" alt="IESA Multimedia Paris">
+        </div><!-- / .career__details -->
+
+    </div><!-- / .career__experienceDescription -->
+</div><!-- / .career -->

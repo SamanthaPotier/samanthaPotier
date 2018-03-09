@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
         this.projectService.getProjects()
-            .then(projects => this.projects = projects.slice(1, 5));
+            .then(projects => this.projects = projects.slice(0, 5));
         this.carouselOne = {
             grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
             slide: 1,

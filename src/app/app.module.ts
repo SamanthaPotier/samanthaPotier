@@ -6,6 +6,7 @@ import { BemModule }                 from 'angular-bem';
 import { SidebarModule }             from 'ng-sidebar';
 import { NgxCarouselModule }         from 'ngx-carousel';
 import 'hammerjs';
+import {ScrollToModule}              from 'ng2-scroll-to';
 
 import { ProjectService }     from './services/project.service';
 import { AppRoutingModule }   from './modules/app-routing.module';
@@ -40,7 +41,8 @@ BemModule.config({
         AppRoutingModule,
         BemModule,
         SidebarModule.forRoot(),
-        NgxCarouselModule
+        NgxCarouselModule,
+        ScrollToModule.forRoot()
     ],
     declarations: [
         AppComponent,
