@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title }              from '@angular/platform-browser';
 import { Router }            from '@angular/router';
-import { trigger,state,style,animation,transition,animate,group } from '@angular/animations';
+import { trigger,state,style,animation,transition,animate,group,query,stagger } from '@angular/animations';
 
 import { Project }           from './project';
 import { ProjectService }    from './../services/project.service';
@@ -12,11 +12,22 @@ import { ProjectService }    from './../services/project.service';
     styleUrls: ['./projects.component.scss'],
     animations: [
         trigger('flyInOut', [
-            state('in', style({transform: 'scale(1)', opacity: 1})),
-            transition('void => *', [
-                style({transform: 'scale(0)', opacity: 0}),
-                animate('2s 0.1s ease'),
-            ]),
+            transition('* => *', [
+                query('.projects__itemFig',
+                    style({ transform: 'translateY(-100%)'}),
+                    { optional: true }
+                ),
+                query('.projects__itemFig',
+                    stagger('100ms', [
+                        animate('200ms', style({ transform: 'translateY(0)'}))
+                    ]), { optional: true }
+                )
+            ])
+            // state('in', style({transform: 'scale(1)', opacity: 1})),
+            // transition('void => *', [
+            //     style({transform: 'scale(0)', opacity: 0}),
+            //     animate('2s 0.1s ease'),
+            // ]),
         ])
     ]
 })
