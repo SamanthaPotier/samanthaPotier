@@ -1,7 +1,6 @@
 import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
 
-
 import { ProjectsComponent }        from './projects.component';
 import { ProjectDetailsComponent }  from './details/projectDetails.component';
 

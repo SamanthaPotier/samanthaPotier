@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title }              from '@angular/platform-browser';
 import { Router }            from '@angular/router';
+import { trigger,state,style,animation,transition,animate,group } from '@angular/animations';
 
 import { Project }           from './project';
 import { ProjectService }    from './../services/project.service';
@@ -8,7 +9,16 @@ import { ProjectService }    from './../services/project.service';
 @Component({
     selector: 'my-projects',
     templateUrl: './projects.component.html',
-    styleUrls: ['./projects.component.scss']
+    styleUrls: ['./projects.component.scss'],
+    animations: [
+        trigger('flyInOut', [
+            state('in', style({transform: 'scale(1)', opacity: 1})),
+            transition('void => *', [
+                style({transform: 'scale(0)', opacity: 0}),
+                animate('2s 0.1s ease'),
+            ]),
+        ])
+    ]
 })
 
 export class ProjectsComponent implements OnInit {

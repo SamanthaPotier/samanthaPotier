@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Meta }              from '@angular/platform-browser';
-import { Router }            from '@angular/router';
-import { NgxCarousel }       from 'ngx-carousel';
+import { Component, OnInit }                                        from '@angular/core';
+import { Meta }                                                     from '@angular/platform-browser';
+import { Router }                                                   from '@angular/router';
+import { NgxCarousel }                                              from 'ngx-carousel';
 
-import { Project }           from './../projects/project';
-import { ProjectService }    from './../services/project.service';
+import { Project }                                                  from './../projects/project';
+import { ProjectService }                                           from './../services/project.service';
 
 
 @Component({
@@ -16,6 +16,7 @@ import { ProjectService }    from './../services/project.service';
 export class HomeComponent implements OnInit {
     public carouselOne: NgxCarousel;
     projects: Project[] = [];
+    goals = ['My first life goal', 'I want to climb a mountain', 'Go ice skiing'];
 
     constructor(
         private router: Router,

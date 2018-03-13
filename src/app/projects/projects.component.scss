@@ -8,6 +8,41 @@
     .projects{
         @at-root #{&}__list{display: flex; flex-wrap: wrap; justify-content: center; max-width: 1800px; margin: 0 auto;}
         @at-root #{&}__item{position: relative; overflow: hidden; text-align: center; cursor: pointer; max-width: 25%;}
+        @at-root #{&}__item_plateforme-de-formation{background: #253446;}
+        @at-root #{&}__item_akka-ds{background: #E2E8ED;}
+        @at-root #{&}__item_akka-ds-backoffice{background: #D36D32;}
+        @at-root #{&}__item_g2s{background: #445665;}
+        @at-root #{&}__item_akka-technologies{background: #445665;}
+        @at-root #{&}__item_digital-learning-path{background: #CBD1D5;}
+        @at-root #{&}__item_bms-point-for-contact{background: #05265F;}
+        @at-root #{&}__item_ram{background: #D36D32;}
+        @at-root #{&}__item_plateforme-intervention{background: #0D1218;}
+        @at-root #{&}__item_akka-aeronews{background: #DEE3E8;}
+        @at-root #{&}__item_akka-emailing{background: #CED2D7;}
+        @at-root #{&}__item_dynamic-art{background: #1960BA;}
+        @at-root #{&}__item_sinistrapp{background: #D8CE56;}
+        @at-root #{&}__item_meubles-gontier{background: #9EA2A7;}
+        @at-root #{&}__item_interieurs-gontier{background: #090E13;}
+        @at-root #{&}__item_joaillerie-mauger{background: #30488E;}
+        @at-root #{&}__item_annuaire-de-ville{background: #E7DA6A;}
+        @at-root #{&}__item_tennis-club-des-loges{background: #2794CD;}
+        @at-root #{&}__item_capitaine-house{background: #845B9B;}
+        @at-root #{&}__item_lm2e{background: #1C99B4;}
+        @at-root #{&}__item_les-jardins-de-la-vieille-fontaine{background: #AFA493;}
+        @at-root #{&}__item_art-du-feu{background: #CA4422;}
+        @at-root #{&}__item_chocolats-vilas-boas{background: #2C1F19;}
+        @at-root #{&}__item_my-3D-factory{background: #E8ECF1;}
+        @at-root #{&}__item_sepale{background: #56849E;}
+        @at-root #{&}__item_easy-cook{background: #468A82;}
+        @at-root #{&}__item_centre-wagram{background: #10375D;}
+        @at-root #{&}__item_jeff-photographe{background: #031237;}
+        @at-root #{&}__item_pp-from-longwy{background: #CF1561;}
+        @at-root #{&}__item_tim-and-kim{background: #8E099F;}
+        @at-root #{&}__item_djula{background: #03060C;}
+        @at-root #{&}__item_hpc{background: #4D4A97;}
+        @at-root #{&}__item_referencement-top-10{background: #4897C8;}
+        @at-root #{&}__item_video-therapie{background: #BFA269;}
+        @at-root #{&}__item_soun-collection{background: #232629;}
         @at-root #{&}__itemFig{background: linear-gradient(-45deg, #0e79b7 0%,#17123a 100%); overflow: hidden; border: solid 1px #bababa; }
         @at-root #{&}__picture{transition: opacity 0.35s, transform 0.35s;}
         @at-root #{&}__projectButton{transition: opacity 0.35s, transform 0.35s;}

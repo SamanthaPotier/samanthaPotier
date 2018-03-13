@@ -43,8 +43,8 @@ export class InMemoryDataService implements InMemoryDbService {
             {
                 "id": 2,
                 "display": false, 
-                "name": "Référence Top 10",
-                "slug": "reference-top-10",
+                "name": "Référencement Top 10",
+                "slug": "referencement-top-10",
                 "thumbnail": "referenceTop10",
                 "domains": [
                     "web"
