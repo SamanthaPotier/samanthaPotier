@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta }              from '@angular/platform-browser';
 import { Router }            from '@angular/router';
 import { NgxCarousel }       from 'ngx-carousel';
 
 import { Project }           from './../projects/project';
 import { ProjectService }    from './../services/project.service';
+
 
 @Component({
     selector: 'home',
@@ -17,8 +19,13 @@ export class HomeComponent implements OnInit {
 
     constructor(
         private router: Router,
-        private projectService: ProjectService
-    ) { }
+        private projectService: ProjectService,
+        private meta: Meta
+    ) { 
+        this.meta.updateTag({ name: 'description', content: 'Samantha Potier - Gestion de projet multimédia, développement front-end et Webdesign UX en freelance. Vous accompagne dans le développement de votre projet multimédia.' }, false);
+        const author = this.meta.getTag('name=author');
+        const keywords = this.meta.getTag('name=keywords');
+    }
 
     getProjects(): void {
         this.projectService.getProjects().then(projects => this.projects = projects);

@@ -9,10 +9,10 @@
         <div elem="menuContent">
             <nav closeSidebar block="navSidebar">
                 <ul elem="list">
-                    <li elem="item"><a elem="link" routerLink="/accueil" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
-                    <li elem="item"><a elem="link" routerLink="/projets" routerLinkActive="current" title="Projets">Projets</a></li>
-                    <li elem="item"><a elem="link" routerLink="/parcours" routerLinkActive="current" title="Parcours">Parcours</a></li>
-                    <li elem="item"><a elem="link" routerLink="/presentation" routerLinkActive="current" title="Présentation">Présentation</a></li>
+                    <li elem="item"><a elem="link" routerLink="/accueil" (click)="setTitle( 'Samantha Potier - Gestion de projet multimédia, Développement et Webdesign UX - Freelance - Yvelines' )" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
+                    <li elem="item"><a elem="link" routerLink="/projets" (click)="setTitle( 'Samantha Potier | Projets - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Projets">Projets</a></li>
+                    <li elem="item"><a elem="link" routerLink="/parcours" (click)="setTitle( 'Samantha Potier | Parcours - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Parcours">Parcours</a></li>
+                    <li elem="item"><a elem="link" routerLink="/presentation" (click)="setTitle( 'Samantha Potier | Présentation - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Présentation">Présentation</a></li>
                 </ul><!-- / .nav__list -->
             </nav><!-- / .nav -->
             <ul closeSidebar block="contactMe">
@@ -38,10 +38,10 @@
                 <nav block="nav">
                     <p elem="download"><a href="/assets/documents/cv_samanthaPotier.pdf" target="_self" download="CV Samantha Potier.pdf" elem="downloadLink"><i elem="icon" class="icon__seeproject"></i>Télécharger le C.V.</a></p>
                     <ul elem="list">
-                        <li elem="item"><a elem="link" routerLink="/accueil" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
-                        <li elem="item"><a elem="link" routerLink="/projets" routerLinkActive="current" title="Projets">Projets</a></li>
-                        <li elem="item"><a elem="link" routerLink="/parcours" routerLinkActive="current" title="Parcours">Parcours</a></li>
-                        <li elem="item"><a elem="link" routerLink="/presentation" routerLinkActive="current" title="Présentation">Présentation</a></li>
+                        <li elem="item"><a elem="link" routerLink="/accueil" (click)="setTitle( 'Samantha Potier - Gestion de projet multimédia, Développement et Webdesign UX - Freelance - Yvelines' )" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
+                        <li elem="item"><a elem="link" routerLink="/projets" (click)="setTitle( 'Samantha Potier | Projets - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Projets">Projets</a></li>
+                        <li elem="item"><a elem="link" routerLink="/parcours" (click)="setTitle( 'Samantha Potier | Parcours - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Parcours">Parcours</a></li>
+                        <li elem="item"><a elem="link" routerLink="/presentation" (click)="setTitle( 'Samantha Potier | Présentation - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Présentation">Présentation</a></li>
                     </ul><!-- / .nav__list -->
                 </nav><!-- / .nav -->
             </div><!-- / .header__innerContent -->

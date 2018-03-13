@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatePipe }  from '@angular/common';
+import { DatePipe }          from '@angular/common';
+import { Title }             from '@angular/platform-browser';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { DatePipe }  from '@angular/common';
 })
 
 export class AppComponent implements OnInit {
-    title = 'Samantha Potier';
+    title = 'Samantha Potier - Gestion de projet multimédia, Développement et Webdesign UX - Freelance - Yvelines';
     today = Date.now();
     fixedTimezone = '2015-06-15T09:03:01+0900';
     private mobile = false;
@@ -22,6 +23,11 @@ export class AppComponent implements OnInit {
     
     private _toggleSidebar(){
         this._opened = !this._opened;
+    }
+
+    public constructor(private titleService: Title ) { }
+    public setTitle( newTitle: string) {
+        this.titleService.setTitle( newTitle );
     }
 
     ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { NgModule }                  from '@angular/core';
-import { BrowserModule }             from '@angular/platform-browser';
+import { BrowserModule, Meta, Title }       from '@angular/platform-browser';
 import { BrowserAnimationsModule }   from '@angular/platform-browser/animations';
 import { HttpModule }                from '@angular/http';
 import { BemModule }                 from 'angular-bem';
@@ -42,7 +42,7 @@ BemModule.config({
         BemModule,
         SidebarModule.forRoot(),
         NgxCarouselModule,
-        ScrollToModule.forRoot()
+        ScrollToModule.forRoot(), 
     ],
     declarations: [
         AppComponent,
@@ -54,7 +54,10 @@ BemModule.config({
         // PageNotFoundComponent
         mobileDirective
     ],
-    providers: [ ProjectService ],
+    providers: [ 
+        ProjectService,
+        Title
+    ],
     bootstrap: [ AppComponent ]
 })
 

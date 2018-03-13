@@ -1,15 +1,20 @@
 <div block="projects" class="projects">
-    <ul elem="list" class="projects__list">
-        <li *ngFor="let project of projects?.reverse()" (click)="onSelect(project)" elem="item" class="projects__item">
+    <!-- <div *ngIf="!loaded">Loading...</div> -->
+
+<!--     <ul *ngIf="loaded" elem="list" class="projects__list">
+ -->    <ul elem="list" class="projects__list">
+        <li *ngFor="let project of projects?.reverse()"
+            elem="item" class="projects__item"
+            (click)="onSelect(project)">
             <figure *ngIf="project.display===true" elem="itemFig" class="projects__itemFig">
                 <img elem="picture" class="projects__picture" src="/assets/images/projects/{{ project.thumbnail }}_thumbnail.jpg" alt="{{ project.name }}">
                 <figcaption elem="caption" class="projects__caption">
                     <ul elem="projectDomains" class="projects__projectDomains">
                         <li *ngFor="let domain of project.domains" elem="domainItem" class="projects__domainItem"><i class="icon__{{ domain }}"></i></li>
                     </ul>
-                    <button elem="projectButton" class="__button projects__projectButton" (click)="gotoDetails()"><i elem="iconButton" class="icon__seeproject projects__iconButton"></i>Voir le projet</button>
+                    <button elem="projectButton" class="__button projects__projectButton"><i elem="iconButton" class="icon__seeproject projects__iconButton"></i>Voir le projet</button>
                 </figcaption><!-- / .projects__caption -->
-            </figure>
+            </figure><!-- / .projects__itemFig -->
         </li><!-- / .projects__item -->
     </ul><!-- / .projects__list -->
 </div><!-- / .projects -->

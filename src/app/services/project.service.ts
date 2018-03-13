@@ -18,9 +18,9 @@ export class ProjectService {
 
     getProjects(): Promise<Project[]> {
         return this.http.get(this.projectsUrl)
-             .toPromise()
-             .then(response => response.json().data as Project[])
-             .catch(this.handleError);
+            .toPromise()
+            .then(response => response.json().data as Project[])
+            .catch(this.handleError);
     }
 
     // getHeroes() {
@@ -35,7 +35,7 @@ export class ProjectService {
         const url = `${this.projectsUrl}/${id}`;
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json().data as Project)
+            .then(response => response.json().data as Project[])
             .catch(this.handleError);
     }
 

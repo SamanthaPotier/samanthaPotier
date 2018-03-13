@@ -18,3 +18,7 @@ a:hover{color: #ff9a14;}
 @media (max-width:1024px) {
     [class*="__innerContent"]{padding-left: 1em; padding-right: 1em;}
 }
+
+
+
+.loading{background: url('/assets/images/loading.svg') repeat #17123a; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;}
