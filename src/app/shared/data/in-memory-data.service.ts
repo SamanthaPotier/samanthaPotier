@@ -209,7 +209,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     "developpement",
                     "responsive"
                 ],
-                "linkToProject": "http://samanthapotier.com/realisations/sepale",
+                "linkToProject": "/assets/realisations/sepale/",
                 "slider": false
             },
             {

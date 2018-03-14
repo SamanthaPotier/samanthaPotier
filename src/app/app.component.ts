@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe }          from '@angular/common';
 import { Title }             from '@angular/platform-browser';
+import { Router }            from '@angular/router';
 
 
 @Component({
@@ -13,6 +14,7 @@ export class AppComponent implements OnInit {
     title = 'Samantha Potier - Gestion de projet multimédia, Développement et Webdesign UX - Freelance - Yvelines';
     today = Date.now();
     fixedTimezone = '2015-06-15T09:03:01+0900';
+    
     private mobile = false;
     private _opened: boolean = false;
     private _modeNum: number = 0;
@@ -28,6 +30,10 @@ export class AppComponent implements OnInit {
     public constructor(private titleService: Title ) { }
     public setTitle( newTitle: string) {
         this.titleService.setTitle( newTitle );
+    }
+
+    getState(outlet) {
+        return outlet.activatedRouteData.state;
     }
 
     ngOnInit(): void {

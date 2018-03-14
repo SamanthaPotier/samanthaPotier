@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title }              from '@angular/platform-browser';
+import { Meta, Title }       from '@angular/platform-browser';
 import { Router }            from '@angular/router';
 import { trigger,state,style,animation,transition,animate,group,query,stagger } from '@angular/animations';
+import { Pipe, PipeTransform } from '@angular/core';
 
 import { Project }           from './project';
 import { ProjectService }    from './../services/project.service';
@@ -19,7 +20,7 @@ import { ProjectService }    from './../services/project.service';
                 ),
                 query('.projects__itemFig',
                     stagger('100ms', [
-                        animate('200ms', style({ transform: 'translateY(0)'}))
+                        animate('200ms ease', style({ transform: 'translateY(0)'}))
                     ]), { optional: true }
                 )
             ])
@@ -42,7 +43,7 @@ export class ProjectsComponent implements OnInit {
         private meta: Meta,
         private titleService: Title
     ) {
-        this.meta.updateTag({ name: 'description', content: 'Samantha Potier - Gestion de projet multimédia, développement front-end et Webdesign UX en freelance. Vous pouvez retrouver quelques projets réalisés par Samantha Potier.' }, false);
+        this.meta.updateTag({ name: 'description', content: 'Samantha Potier - Gestion de projet multimédia, développement front-end et Webdesign UX en freelance. Vous pouvez retrouver quelques projets réalisés par Samantha Potier.' });
         const author = this.meta.getTag('name=author');
         const keywords = this.meta.getTag('name=keywords');
     }
@@ -58,6 +59,15 @@ export class ProjectsComponent implements OnInit {
     ngOnInit(): void {
         this.getProjects();
     }
+    // ngOnInit(): void {
+    //     this.getProjects()
+    //         .then(projects => this.projects = projects.display = true);
+    // }
+    // 
+    // ngOnInit(): void {
+    //     this.projectService.getProjects()
+    //         .then(projects => this.projects = projects.slice(0, 5));
+    // }
 
     onSelect(project: Project) {
         this.router.navigate(['/projets', project.id]);

@@ -1,16 +1,11 @@
 <div block="projects" class="projects">
     <!-- <div *ngIf="!loaded">Loading...</div> -->
-
-<!--     <ul *ngIf="loaded" elem="list" class="projects__list"> -->
     <ul elem="list" class="projects__list" [@flyInOut]="projects">
         <li *ngFor="let project of projects?.reverse()"
             elem="item" class="projects__item projects__item_{{project.slug}}"
             (click)="onSelect(project)">
             <!-- <figure *ngIf="project.display===true" -->
-            <figure 
-                (@flyInOut.start)="'enter'"
-                [@flyInOut]="'in'"
-                elem="itemFig" class="projects__itemFig">
+            <figure *ngIf="project.display===true" elem="itemFig" class="projects__itemFig">
                 <img elem="picture" class="projects__picture" src="/assets/images/projects/{{ project.thumbnail }}_thumbnail.jpg" alt="{{ project.name }}">
                 <figcaption elem="caption" class="projects__caption">
                     <ul elem="projectDomains" class="projects__projectDomains">

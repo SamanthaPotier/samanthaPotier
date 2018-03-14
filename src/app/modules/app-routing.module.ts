@@ -9,20 +9,32 @@ import { CareerComponent }          from './../informations/career.component';
 const appRoutes: Routes = [
     {
         path: 'accueil',
-        component: HomeComponent
+        component: HomeComponent,
+        data: {
+            animation: 'home'
+        }
     },
     {
         path: 'presentation',
-        component: PresentationComponent
+        component: PresentationComponent,
+        data: {
+            animation: 'presentation'
+        }
     },
     {
         path: 'parcours',
-        component: CareerComponent
+        component: CareerComponent,
+        data: {
+            animation: 'career'
+        }
     },
     {
         path: '',
         redirectTo: '/accueil',
-        pathMatch: 'full'
+        pathMatch: 'full',
+        data: {
+            animation: 'home'
+        }
     },
     // { path: '**', component: PageNotFoundComponent }
 ];

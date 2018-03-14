@@ -4,13 +4,23 @@ import { Component, OnInit }                from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Location }                         from '@angular/common';
 
-import { Project }         from './../project';
-import { ProjectService }  from './../../services/project.service';
+import { Project }                 from './../project';
+import { ProjectService }          from './../../services/project.service';
+import { enterLeft, fadeInAnimation }    from '../../shared/animations/index';
+
 
 
 
 @Component({
     selector: 'project-details',
+    animations: [
+        enterLeft,
+        fadeInAnimation
+    ],
+    host: {
+        '[@enterLeft]': '',
+        '[@fadeInAnimation]': ''
+    },
     templateUrl: './projectDetails.component.html',
     styleUrls: ['./projectDetails.component.scss'],
 })

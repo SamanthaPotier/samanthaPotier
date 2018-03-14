@@ -8,11 +8,17 @@ const projectsRoutes: Routes = [
     {
         path: 'projets',
         component: ProjectsComponent,
-        data: { title: 'Liste des projets' }
+        data: { 
+            title: 'Liste des projets',
+            animation: 'projects'
+        }
     },
     {
         path: 'projets/:id',
-        component: ProjectDetailsComponent
+        component: ProjectDetailsComponent,
+        data: {
+            animation: 'projetDetails'
+        }
     },
 ];
 

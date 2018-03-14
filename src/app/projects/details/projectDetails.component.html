@@ -1,5 +1,5 @@
 <div *ngIf="project" block="projectDetails" class="projectDetails">
-    <div elem="pictureBlock" class="projectDetails__pictureBlock">
+    <div elem="pictureBlock" class="projectDetails__pictureBlock" [@enterLeft]>
         <picture>
             <source media="(min-width: 800px)" srcset="/assets/images/projects/{{ project.image }}_@1600.png">
             <source media="(min-width: 400px)" srcset="/assets/images/projects/{{ project.image }}_@1600.png">
@@ -7,7 +7,7 @@
             <img elem="image" class="projectDetails__image" src="/assets/images/projects/{{ project.image }}_@800.png" alt="{{ project.name }}">
         </picture>
     </div><!-- / .projectDetails__pictureBlock -->
-    <div elem="textPart" class="projectDetails__textPart">
+    <div elem="textPart" class="projectDetails__textPart" [@fadeInAnimation]>
         <h2 elem="title" class="projectDetails__title">{{ project.name }}</h2>
         <p elem="subTitle" class="projectDetails__subTitle">{{ project.subTitle }}</p>
         <p [innerHTML]="project.description" elem="description" class="projectDetails__description">{{ project.description }}</p>
@@ -20,8 +20,8 @@
     </div><!-- / .projectDetails__textPart -->
 </div><!-- / .projectDetails -->
 
-<div block="projectNav" class="projectNav">
-    <button elem="link" mod="prev" class="projectNav__link projectNav__link_prev"><i elem="icon" class="icon__prev projectNav__icon"></i>Nom du projet</button>
+<div block="projectNav" class="projectNav" [@fadeInAnimation]>
+    <!-- <button elem="link" mod="prev" class="projectNav__link projectNav__link_prev"><i elem="icon" class="icon__prev projectNav__icon"></i>Nom du projet</button> -->
     <button (click)="goBack()" elem="link" mod="back" class="projectNav__link projectNav__link_back"><i elem="icon" class="icon__arrowBack projectNav__icon"></i>Retour aux projets</button>
-    <button elem="link"  mod="next" class="projectNav__link projectNav__link_next">Nom du projet<i elem="icon" class="icon__next projectNav__icon"></i></button>
+    <!-- <button elem="link"  mod="next" class="projectNav__link projectNav__link_next">Nom du projet<i elem="icon" class="icon__next projectNav__icon"></i></button> -->
 </div><!-- / .projectNav -->

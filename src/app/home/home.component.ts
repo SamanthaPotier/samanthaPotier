@@ -1,14 +1,17 @@
-import { Component, OnInit }                                        from '@angular/core';
-import { Meta }                                                     from '@angular/platform-browser';
-import { Router }                                                   from '@angular/router';
-import { NgxCarousel }                                              from 'ngx-carousel';
+import { Component, OnInit }  from '@angular/core';
+import { Meta }               from '@angular/platform-browser';
+import { Router }             from '@angular/router';
+import { NgxCarousel }        from 'ngx-carousel';
 
-import { Project }                                                  from './../projects/project';
-import { ProjectService }                                           from './../services/project.service';
+import { Project }            from './../projects/project';
+import { ProjectService }     from './../services/project.service';
+import { fadeInAnimation }    from '../shared/animations/index';
 
 
 @Component({
     selector: 'home',
+    animations: [fadeInAnimation],
+    host: { '[@fadeInAnimation]': ''},
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
@@ -16,14 +19,13 @@ import { ProjectService }                                           from './../s
 export class HomeComponent implements OnInit {
     public carouselOne: NgxCarousel;
     projects: Project[] = [];
-    goals = ['My first life goal', 'I want to climb a mountain', 'Go ice skiing'];
 
     constructor(
         private router: Router,
         private projectService: ProjectService,
         private meta: Meta
     ) { 
-        this.meta.updateTag({ name: 'description', content: 'Samantha Potier - Gestion de projet multimédia, développement front-end et Webdesign UX en freelance. Vous accompagne dans le développement de votre projet multimédia.' }, false);
+        this.meta.updateTag({ name: 'description', content: 'Samantha Potier - Gestion de projet multimédia, développement front-end et Webdesign UX en freelance. Vous accompagne dans le développement de votre projet multimédia.' });
         const author = this.meta.getTag('name=author');
         const keywords = this.meta.getTag('name=keywords');
     }
@@ -34,7 +36,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
         this.projectService.getProjects()
-            .then(projects => this.projects = projects.slice(0, 5));
+            .then(projects => this.projects = projects.slice(-5, -1));
         this.carouselOne = {
             grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
             slide: 1,
