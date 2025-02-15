@@ -20,7 +20,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     "graphisme",
                     "developpement"
                 ],
-                "slider": true
+                "slider": false,
             },
             {
                 "id": 1, 
@@ -38,7 +38,9 @@ export class InMemoryDataService implements InMemoryDbService {
                 "sectors": [
                     "graphisme"
                 ],
-                "slider": false
+                "slider": false,
+                "linkToPrevProject": "0",
+                "linkToNextProject": "3",
             },
             {
                 "id": 2,
@@ -209,7 +211,8 @@ export class InMemoryDataService implements InMemoryDbService {
                     "developpement",
                     "responsive"
                 ],
-                "linkToProject": "/assets/realisations/sepale/",
+                // "linkToProject": "/assets/realisations/sepale/",
+                "linkToProject": "",
                 "slider": false
             },
             {
@@ -658,7 +661,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     "developpement",
                     "management"
                 ],
-                "linkToProject": "",
+                "linkToProject": "https://xd.adobe.com/view/b207330c-6c2a-4df3-61b2-38984a5c422a-c436/?fullscreen",
                 "slider": false
             },
             {
@@ -701,6 +704,93 @@ export class InMemoryDataService implements InMemoryDbService {
                 ],
                 "linkToProject": "",
                 "slider": false
+            },
+            {
+                "id": 35,
+                "display": true, 
+                "name": "CV AT",
+                "slug": "cv-at",
+                "thumbnail": "akkaDs_cvAt",
+                "domains": [
+                    "web",
+                    "management"
+                ],
+                "image":"akkaDs_cvAt",
+                "subTitle": "Administratif",
+                "description": "Lorsque l'on postule d'une société de service, on doit systématiquement remplir un fichier Word pour renseigner notre CV. AKKA DS souhaite rendre cette <span class='important'>expérience enrichissante et amusante</span> : l'utilisateur répond à des questions, et un CV formaté est généré dynamiquement. À l'aide d'un login et mot de passe, le candidat est indépendant pour remplir, éditer et partager son CV.",
+                "intervention": "Rédaction des <span class='important'>Spécifications fonctionnelles et techniques</span>, <span class='important'>suivi et gestion du projet</span> avec Trello. Déclinaison de la charte graphique sur des <span class='important'>wireframes interactifs</span>. <span class='important'>Intégration statique HTML/CSS</span> et création du template du CV au format HTML",
+                "sectors": [
+                    "wireframe",
+                    "developpement",
+                    "management"
+                ],
+                "linkToProject": "http://samanthapotier.com/realisations/cvAt/login.html",
+                "slider": false
+            },
+            {
+                "id": 36,
+                "display": true, 
+                "name": "ProxAffiche, ExterionMedia",
+                "slug": "exterion-media-proxaffiche",
+                "thumbnail": "exterionMedia_proxAffiche",
+                "domains": [
+                    "web",
+                    "application"
+                ],
+                "image":"exterionMedia_proxAffiche",
+                "subTitle": "Affichage publicitaire",
+                "description": "ProxAffiche est un secteur d'activité d'ExterionMedia, permettant de gérer des campagnes d'affichages publicitaires sur des panneaux dans les villes. ExterionMedia souhaite mettre à jour sa plateforme permettant aux commerciales de générer des devis auprès de leurs clients (recherche de panneaux disponibles) et de générer un devis dynamiquement. En plus de l'application web, une application mobile permet de valider des dérogations manager. Un espace accessible à tout le monde nécessite également une mise à jour correspondant à la nouvelle charte graphique.",
+                "intervention": "Création de <span class='important'>wireframes interactifs</span> pour l'ensemble des interfaces, puis <span class='important'>déclinaison de la charte graphique</span>, <span class='important'>intégration sous Angular6</span> de l'ensemble des nouvelles pages. Travail en collaboration, sur <span class='important'>VisualStudio</span>, avec l'équipe de développeur pour mettre à jour le site existant.",
+                "sectors": [
+                    "wireframe",
+                    "webdesign",
+                    "developpement",
+                    "responsive"
+                ],
+                "linkToProject": "",
+                "slider": true
+            },
+            {
+                "id": 37,
+                "display": true, 
+                "name": "Drive App",
+                "slug": "drive-app-schneider-electric",
+                "thumbnail": "schneiderElectric_driveApp",
+                "domains": [
+                    "application"
+                ],
+                "image":"schneiderElectric_driveApp",
+                "subTitle": "Schneider Electric",
+                "description": "Schneider Electric souhaite développer un <span class='important'>POC</span> afin de les aider à améliorer la satisfaction client sur le support. Mise en place d'une application permettant aux support Schneider de se connecter à un appareil à distance en défaut et tenter de régler le soucis. Le technicien sur place peut également le faire, en accédant à l'historique des interventions.",
+                "intervention": "Animation de <span class='important'>deux ateliers UX</span> avec les utilisateurs finaux de l'application, afin de connaître les cas d'usage et réaliser les wireframes principaux à la mains. Suite aux éléments receuilli création de <span class='important'>wireframes interactifs</span>, en appliquant la charte graphique Schneider Electric, pour l'application mobile sur support en local et de l'application desktop pour le support à distance. Ces wireframes permettent à l'équipe de promouvoir le projet en interne.",
+                "sectors": [
+                    "wireframe",
+                    "webdesign",
+                ],
+                "linkToProject": "https://xd.adobe.com/view/26b7ac66-d0d7-4371-403b-4bf3765f56bf-5086/?fullscreen",
+                "slider": true
+            },
+            {
+                "id": 38,
+                "display": true, 
+                "name": "DOOH Bailleur, ExterionMedia",
+                "slug": "exterion-media-dooh-bailleur",
+                "thumbnail": "exterionMedia_doohBailleur",
+                "domains": [
+                    "identite",
+                    "application"
+                ],
+                "image":"exterionMedia_doohBailleur",
+                "subTitle": "Gestion",
+                "description": "DOOH Bailleur est un secteur d'activité d'ExterionMedia, permettant aux bailleurs de gérer leurs espaces publicitaires. Sur cette application ils peuvent connaître leurs emplacements, combien ils leurs rapportent et contacter le commercial d'ExterionMédia pour changer leurs bails.",
+                "intervention": "Proposition d'une charte graphique et création d'un logo (pas encore sélectionné). Création graphique de l'ensemble des pages de l'application mobile. Création d'une mascotte pour personnalisée DOOH bailleur. Export de l'ensemble des assets pour permettre à l'équipe de développement d'être autonome.",
+                "sectors": [
+                    "graphisme",
+                    "identite",
+                    "webdesign",
+                ],
+                "linkToProject": "",
+                "slider": true
             },
 
 
