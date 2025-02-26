@@ -2,6 +2,7 @@ import { Directive, Input } from '@angular/core';
 
 @Directive({
     selector: '[appMobile]',
+    standalone: false
 })
 
 export class mobileDirective{

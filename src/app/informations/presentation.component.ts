@@ -5,9 +5,10 @@ import { fadeInAnimation }    from '../shared/animations/index';
 @Component({
     selector: 'presentation',
     animations: [fadeInAnimation],
-    host: { '[@fadeInAnimation]': ''},
+    host: { '[@fadeInAnimation]': '' },
     templateUrl: './presentation.component.html',
-    styleUrls: ['./presentation.component.scss']
+    styleUrl: './presentation.component.scss',
+    standalone: false
 })
 
 export class PresentationComponent {

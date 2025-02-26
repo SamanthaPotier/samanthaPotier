@@ -1,30 +1,24 @@
-<ng-sidebar-container block="sidebarContainer">
-    <ng-sidebar
-        [(opened)]="_opened"
-        [mode]="'slide'"
-        [position]="'right'"
-        [closeOnClickBackdrop]="_closeOnClickBackdrop"
-        [showBackdrop]="_showBackdrop">
-        
-        <div elem="menuContent">
-            <nav closeSidebar block="navSidebar">
-                <ul elem="list">
-                    <li elem="item"><a elem="link" routerLink="/accueil" (click)="setTitle( 'Samantha Potier - Gestion de projet multimédia, Développement et Webdesign UX - Freelance - Yvelines' )" routerLinkActive="current" title="Accueil Samantha Potier">Accueil</a></li>
-                    <li elem="item"><a elem="link" routerLink="/projets" (click)="setTitle( 'Samantha Potier | Projets - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Projets">Projets</a></li>
-                    <li elem="item"><a elem="link" routerLink="/parcours" (click)="setTitle( 'Samantha Potier | Parcours - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Parcours">Parcours</a></li>
-                    <li elem="item"><a elem="link" routerLink="/presentation" (click)="setTitle( 'Samantha Potier | Présentation - Gestion de projet multimédia, Développement et Webdesign UX' )" routerLinkActive="current" title="Présentation">Présentation</a></li>
-                </ul><!-- / .nav__list -->
-            </nav><!-- / .nav -->
-            <ul closeSidebar block="contactMe">
-                <li elem="item"><a routerLink="/presentation" elem="link"><i class="icon__contact"></i></a></li>
-                <li elem="item"><a href="http://fr.linkedin.com/pub/samantha-potier/58/734/11b" title="Lien vers la page profil LinkedIn de Samantha Potier" target="_blank" elem="link"><i class="icon__linkedin"></i></a></li>
-                <li elem="item"><a href="https://twitter.com/SamPotier" title="Lien vers la page profil Twitter de Samantha Potier" target="_blank" elem="link"><i class="icon__twitter"></i></a></li>
-            </ul>
-            <p elem="download"><a href="/assets/documents/cv_samanthaPotier.pdf" target="_self" download="CV Samantha Potier.pdf" elem="downloadLink"><i elem="icon" class="icon__seeproject"></i>Télécharger le C.V.</a></p>
-        </div>
-    </ng-sidebar>
+<div block="sidebarContainer">
+    <div class="position-relative">
+        <app-sidebar
+          [isSidebarCollapsed]="isSidebarCollapsed"
+          (sidebarToggle)="onSidebarToggle()"
+        >
+        </app-sidebar>
+        <button
+          class="sidebar-toggle-btn"
+          [ngClass]="{ 'sidebar-collapsed': isSidebarCollapsed }"
+          (click)="onSidebarToggle()"
+        >
+          <i
+            [class]="
+              isSidebarCollapsed ? 'fas fa-arrow-right' : 'fas fa-arrow-left'
+            "
+          ></i>
+        </button>
+    </div>
 
-    <div ng-sidebar-content block="sidebarContent">
+    <div class="content" [ngClass]="{ 'content-expanded': isSidebarCollapsed }" block="sidebarContent">
         <!-- <button class="demo-control" (click)="_toggleMode()">mode ({{_MODES[_modeNum]}})</button> -->
         <header block="header">
             <div elem="innerContent">
@@ -45,9 +39,10 @@
                     </ul><!-- / .nav__list -->
                 </nav><!-- / .nav -->
             </div><!-- / .header__innerContent -->
-            <button block="menuMobile" (click)="_toggleSidebar()"><i elem="icon" class="icon__menu"></i>Menu</button>
+            <button block="menuMobile" [ngClass]="{ 'sidebar-collapsed': isSidebarCollapsed }" (click)="onSidebarToggle()"><i elem="icon" class="icon__menu"></i>Menu</button>
         </header><!-- / .header -->
         <router-outlet></router-outlet>
+
 
         <footer block="footer">
             <section elem="top">
@@ -57,9 +52,10 @@
             </section><!-- / .footer__top -->
             <section elem="bottom">
                 <div elem="innerContent">
-                    <p elem="text">©Samantha Potier 2011 - {{ today | date:'yyyy' }}</p>
+                    <p elem="text">©Samantha Potier 2011 - {{ '{' }} today | date:'yyyy' {{ '}' }}</p>
+                    <p>{{ '{' }} value_expression | date [ : format [ : timezone [ : locale ] ] ] {{ '}' }}</p>
                 </div><!-- / .footer__innerContent -->
             </section><!-- / .footer__bottom -->
         </footer><!-- / .footer -->
     </div>
-</ng-sidebar-container>
+</div>

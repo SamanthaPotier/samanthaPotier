@@ -1,14 +1,16 @@
 import { Component }          from '@angular/core';
 import { Meta }               from '@angular/platform-browser';
 import { fadeInAnimation }    from '../shared/animations/index';
-
+import { CommonModule }       from '@angular/common';
 
 @Component({
     selector: 'career',
     animations: [fadeInAnimation],
-    host: { '[@fadeInAnimation]': ''},
+    imports: [CommonModule],
+    host: { '[@fadeInAnimation]': '' },
     templateUrl: './career.component.html',
-    styleUrls: ['./career.component.scss']
+    styleUrl: './career.component.scss',
+    standalone: true
 })
 
 export class CareerComponent {

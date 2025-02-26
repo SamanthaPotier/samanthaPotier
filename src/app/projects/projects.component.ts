@@ -10,19 +10,14 @@ import { ProjectService }    from './../services/project.service';
 @Component({
     selector: 'my-projects',
     templateUrl: './projects.component.html',
-    styleUrls: ['./projects.component.scss'],
+    styleUrl: './projects.component.scss',
     animations: [
         trigger('flyInOut', [
             transition('* => *', [
-                query('.projects__itemFig',
-                    style({ transform: 'translateY(-100%)'}),
-                    { optional: true }
-                ),
-                query('.projects__itemFig',
-                    stagger('100ms', [
-                        animate('200ms ease', style({ transform: 'translateY(0)'}))
-                    ]), { optional: true }
-                )
+                query('.projects__itemFig', style({ transform: 'translateY(-100%)' }), { optional: true }),
+                query('.projects__itemFig', stagger('100ms', [
+                    animate('200ms ease', style({ transform: 'translateY(0)' }))
+                ]), { optional: true })
             ])
             // state('in', style({transform: 'scale(1)', opacity: 1})),
             // transition('void => *', [
@@ -30,11 +25,12 @@ import { ProjectService }    from './../services/project.service';
             //     animate('2s 0.1s ease'),
             // ]),
         ])
-    ]
+    ],
+    standalone: false
 })
 
 export class ProjectsComponent implements OnInit {
-    projects: Project[];
+    projects!: Project[];
     // title = 'Samantha Potier';
 
     constructor(

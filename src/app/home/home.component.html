@@ -1,7 +1,7 @@
-<ngx-carousel block="carousel"
+<!-- <ngx-carousel block="carousel"
     [inputs]="carouselOne"
     (carouselLoad)="myfunc($event)">
-    <!-- *ngIf="project.slider =='true'"  -->
+    *ngIf="project.slider =='true'"
     <ngx-item NgxCarouselItem *ngFor="let project of projects">
         <div elem="item">
             <div elem="textPart">
@@ -19,10 +19,38 @@
             </div>
         </div>
     </ngx-item>
+
+    
     <button NgxCarouselPrev elem="nav" mod="left"><i elem="icon" class="icon__prevslider"></i></button>
     <button NgxCarouselNext elem="nav" mod="right"><i elem="icon" class="icon__nextslider"></i></button>
-</ngx-carousel>
+</ngx-carousel> -->
 
+<!-- <ngu-carousel #myCarousel [inputs]="carouselTile" [dataSource]="carouselTileItems">
+  <ngu-tile *nguCarouselDef="let item; let i = index">
+
+    <ngu-carousel #myCarousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad(i)" [dataSource]="carouselTiles[i]">
+      <ngu-tile *nguCarouselDef="let item; let j = index">
+        <div class="tile" [style.background]="'url(' + item + ')'" style="min-height: 200px">
+          <h1>{{j}}</h1>
+        </div>
+      </ngu-tile>
+      <button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst() ? 0.5:1">&lt;</button>
+      <button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast() ? 0.5:1">&gt;</button>
+      <ul class="myPoint" NguCarouselPoint>
+        <li *ngFor="let j of myCarousel.pointNumbers(); let j = index" [class.active]="j==myCarousel.activePoint()" (click)="myCarousel.moveTo(j)"
+          [style.background]="'url(' + carouselTileItems[j] + ')'"></li>
+      </ul>
+    </ngu-carousel>
+
+  </ngu-tile>
+  <button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst() ? 0.5:1">&lt;</button>
+  <button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast() ? 0.5:1">&gt;</button>
+  <ul class="myPoint" NguCarouselPoint>
+    <li *ngFor="let i of myCarousel.pointNumbers(); let i = index" [class.active]="i==myCarousel.activePoint()" (click)="myCarousel.moveTo(i)"
+      [style.background]="'url(' + carouselTileItems[i] + ')'"></li>
+  </ul>
+</ngu-carousel>
+ -->
 <div class="__innerContent">
     <div block="doing">
         <div elem="sector">

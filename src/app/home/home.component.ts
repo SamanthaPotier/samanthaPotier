@@ -1,7 +1,7 @@
 import { Component, OnInit }  from '@angular/core';
 import { Meta }               from '@angular/platform-browser';
 import { Router }             from '@angular/router';
-import { NgxCarousel }        from 'ngx-carousel';
+import { NguCarouselConfig }  from '@ngu/carousel';
 
 import { Project }            from './../projects/project';
 import { ProjectService }     from './../services/project.service';
@@ -11,13 +11,14 @@ import { fadeInAnimation }    from '../shared/animations/index';
 @Component({
     selector: 'home',
     animations: [fadeInAnimation],
-    host: { '[@fadeInAnimation]': ''},
+    host: { '[@fadeInAnimation]': '' },
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    styleUrl: './home.component.scss',
+    standalone: false
 })
 
 export class HomeComponent implements OnInit {
-    public carouselOne: NgxCarousel;
+    public carouselOne!: NguCarouselConfig;
     projects: Project[] = [];
 
     constructor(

@@ -1,15 +1,16 @@
 import { NgModule }                  from '@angular/core';
 import { BrowserModule, Meta, Title }       from '@angular/platform-browser';
 import { BrowserAnimationsModule }   from '@angular/platform-browser/animations';
-import { HttpModule }                from '@angular/http';
+import { HttpClientModule }                from '@angular/common/http';
 import { BemModule }                 from 'angular-bem';
-import { SidebarModule }             from 'ng-sidebar';
-import { NgxCarouselModule }         from 'ngx-carousel';
-import 'hammerjs';
-import {ScrollToModule}              from 'ng2-scroll-to';
+import { NguCarousel, NguTileComponent, NguCarouselDefDirective, NguCarouselNextDirective, NguCarouselPrevDirective, NguItemComponent } from '@ngu/carousel';
 
-import { ProjectService }     from './services/project.service';
-import { AppRoutingModule }   from './modules/app-routing.module';
+import 'hammerjs';
+import { ScrollToModule }              from 'ng2-scroll-to';
+import { CommonModule }                 from '@angular/common';
+
+import { ProjectService }       from './services/project.service';
+import { AppRoutingModule }         from './modules/app-routing.module';
 
 import { ProjectsModule }         from './projects/projects.module';
 // import { ProjectsRoutingModule }  from './projects/projects-routing.module';
@@ -22,6 +23,7 @@ import { AppComponent }            from './app.component';
 import { HomeComponent }           from './home/home.component';
 import { PresentationComponent }   from './informations/presentation.component';
 import { CareerComponent }         from './informations/career.component';
+import { SidebarComponent }         from './sidebar/sidebar.component';
 // import { PageNotFoundComponent }   from './pageNotFound.component';
 
 BemModule.config({
@@ -34,15 +36,22 @@ BemModule.config({
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        HttpModule,
+        HttpClientModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         BemModule,
         ProjectsModule,
         // ProjectsRoutingModule,
         AppRoutingModule,
-        SidebarModule.forRoot(),
-        NgxCarouselModule,
+        //SidebarModule.forRoot(),
         ScrollToModule.forRoot(), 
+        CommonModule,
+        NguCarousel, 
+        NguTileComponent,   
+        NguCarousel,
+        NguCarouselDefDirective,
+        NguCarouselNextDirective,
+        NguCarouselPrevDirective,
+        NguItemComponent
     ],
     declarations: [
         AppComponent,
@@ -52,7 +61,8 @@ BemModule.config({
         PresentationComponent,
         CareerComponent,
         // PageNotFoundComponent
-        mobileDirective
+        mobileDirective,
+        SidebarComponent
     ],
     providers: [ 
         ProjectService,
